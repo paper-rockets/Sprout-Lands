@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0.0",
+  "gameId": "montreal-river-ribbon-v1",
+  "title": "Sprout Lands: River Ribbon Adventure",
+  "shortTitle": "River Ribbon",
+  "description": "A gentle personalized adventure across a river island inspired by Montréal.",
+  "engine": {
+    "phaserVersion": "4.2.1",
+    "renderType": "WEBGL",
+    "targetFps": 60,
+    "pixelArt": true,
+    "roundPixels": true,
+    "width": 960,
+    "height": 540
+  },
+  "recipient": {
+    "defaultName": "Adventurer",
+    "greeting": "Welcome to River Ribbon Island!",
+    "avatarId": "char_capybara_natural"
+  },
+  "pwa": {
+    "name": "Sprout Lands - River Ribbon Edition",
+    "shortName": "RiverRibbon",
+    "themeColor": "#33691e",
+    "backgroundColor": "#19354e",
+    "startUrl": "./index.html",
+    "cacheVersion": "v1.0.0"
+  },
+  "world": {
+    "graphFile": "./world/world.graph.json",
+    "startRegionId": "region_west_meadow",
+    "spawnPointId": "spawn_farmstead"
+  },
+  "quests": [
+    "./quests/ducklings.quest.json",
+    "./quests/lost-forest.quest.json"
+  ],
+  "accessibility": {
+    "reducedMotion": false,
+    "textSpeed": "normal",
+    "soundVolume": 0.8,
+    "minTouchTargetPx": 44
+  }
+}

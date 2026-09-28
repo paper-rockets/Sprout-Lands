@@ -1,0 +1,700 @@
+/* Sprout Lands Typography */
+@font-face {
+  font-family: 'SproutLands';
+  src: url('/assets/fonts/pixelFont-7-8x14-sproutLands.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SproutLandsSmall';
+  src: url('/assets/fonts/pixelFont-4-7x7-sproutLands.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --bg-water: #19354e;
+  --sprout-ink: #432c21;
+  --sprout-ink-light: #6a4938;
+  --sprout-parchment: #e8cfa6;
+  --sprout-wood-dark: #3e2212;
+  --sprout-wood-light: #b87a4a;
+  --sprout-gold: #ffd54f;
+  --sprout-green: #558b2f;
+  --sprout-danger: #c62828;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-water);
+  font-family: 'SproutLands', monospace, sans-serif;
+  color: #fff9ea;
+  -webkit-font-smoothing: none;
+  text-rendering: geometricPrecision;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#game-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#game-container canvas {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  image-rendering: pixelated;
+}
+
+/* Authentic Sprout Lands Modal Overlay */
+.modal-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 30, 45, 0.75);
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* Authentic 9-Slice Dialogue / Menu Box */
+.modal-dialog {
+  border: 24px solid transparent;
+  border-image: url('/assets/ui/dialogue/dialog box.png') 16 fill repeat;
+  image-rendering: pixelated;
+  width: 100%;
+  max-width: 540px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--sprout-ink);
+  font-family: 'SproutLands', monospace;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+  margin: auto;
+}
+
+.modal-header {
+  padding: 4px 8px 12px 8px;
+  border-bottom: 2px solid #8d623d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-title {
+  font-family: 'SproutLands', monospace;
+  font-size: 20px;
+  color: var(--sprout-ink);
+  letter-spacing: 0.5px;
+}
+
+/* Sprout Lands Pixel-Art X Button */
+.btn-pixel-icon.btn-x {
+  width: 24px;
+  height: 24px;
+  background: url('/assets/ui/controls/big X.png') no-repeat center / contain;
+  border: none;
+  cursor: pointer;
+  image-rendering: pixelated;
+}
+
+.btn-pixel-icon.btn-x:hover,
+.btn-pixel-icon.btn-x:active {
+  background-image: url('/assets/ui/controls/big X pressed.png');
+}
+
+.modal-body {
+  padding: 12px 6px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: var(--sprout-ink);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 14px;
+  color: var(--sprout-ink);
+  font-weight: bold;
+}
+
+/* Inlaid Parchment Input Field */
+.form-input {
+  background: #deb887;
+  border: 3px solid #784824;
+  border-top-color: #533017;
+  border-left-color: #533017;
+  border-radius: 2px;
+  padding: 8px 12px;
+  color: #2b1810;
+  font-family: 'SproutLands', monospace;
+  font-size: 16px;
+  outline: none;
+  image-rendering: pixelated;
+}
+
+.form-input:focus {
+  border-color: #2e7d32;
+}
+
+.form-feedback {
+  font-size: 12px;
+  min-height: 16px;
+}
+
+.form-feedback.error {
+  color: var(--sprout-danger);
+}
+
+/* Authentic Sprout Lands Portrait Backdrop Frames */
+.avatar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.avatar-card {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.avatar-frame {
+  width: 64px;
+  height: 64px;
+  background: url('/assets/ui/portraits/backdrops_a1.png') no-repeat center / contain;
+  image-rendering: pixelated;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s;
+}
+
+.avatar-card:hover .avatar-frame {
+  transform: scale(1.05);
+}
+
+.avatar-card.active .avatar-frame {
+  background-image: url('/assets/ui/portraits/backdrops_a4.png');
+  filter: drop-shadow(0 3px 3px rgba(30, 20, 13, 0.48));
+}
+
+.avatar-sprite {
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-size: 384px 144px;
+  background-position: -192px -48px; /* Front contact pose */
+  image-rendering: pixelated;
+}
+
+.avatar-name {
+  font-family: 'SproutLands', monospace;
+  font-size: 13px;
+  color: var(--sprout-ink);
+  margin-top: 4px;
+  text-align: center;
+}
+
+/* Optional Photo Section */
+.photo-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.photo-preview-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid #784824;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d4b584;
+  font-size: 11px;
+  color: var(--sprout-ink-light);
+}
+
+.photo-preview-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-file-upload {
+  background: #8b5a36;
+  border: 2px solid #4a2812;
+  border-top-color: #b87a4a;
+  border-left-color: #b87a4a;
+  border-radius: 3px;
+  padding: 6px 12px;
+  color: #fff9ea;
+  font-family: 'SproutLands', monospace;
+  font-size: 13px;
+  cursor: pointer;
+  image-rendering: pixelated;
+}
+
+.btn-file-upload:hover {
+  background: #9d673f;
+}
+
+.btn-secondary {
+  background: none;
+  border: 2px solid #784824;
+  color: var(--sprout-ink);
+  font-family: 'SproutLands', monospace;
+  border-radius: 3px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* Settings Controls */
+.settings-section {
+  border-top: 2px solid #8d623d;
+  padding-top: 10px;
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 14px;
+  color: var(--sprout-ink);
+}
+
+.slider {
+  accent-color: #558b2f;
+  width: 130px;
+}
+
+.form-select {
+  background: #deb887;
+  border: 2px solid #784824;
+  color: var(--sprout-ink);
+  font-family: 'SproutLands', monospace;
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-size: 13px;
+}
+
+/* Footer & Wooden Button */
+.modal-footer {
+  padding: 12px 6px 4px 6px;
+  border-top: 2px solid #8d623d;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-sprout-wood {
+  background: #739d42;
+  border: 3px solid #2f5416;
+  border-top-color: #9ecc61;
+  border-left-color: #9ecc61;
+  border-radius: 4px;
+  padding: 8px 20px;
+  font-family: 'SproutLands', monospace;
+  font-size: 16px;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #1b350a;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  image-rendering: pixelated;
+}
+
+.btn-sprout-wood:hover {
+  background: #84b24b;
+}
+
+.btn-sprout-wood:active {
+  border-top-color: #2f5416;
+  border-left-color: #2f5416;
+  border-bottom-color: #9ecc61;
+  border-right-color: #9ecc61;
+  transform: translateY(2px);
+}
+
+.btn-sprout-wood:disabled {
+  background: #8d8376;
+  border-color: #524b43;
+  color: #d1cbc3;
+  cursor: not-allowed;
+  text-shadow: none;
+}
+
+.btn-check-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('/assets/ui/controls/check mark.png') no-repeat center / contain;
+  image-rendering: pixelated;
+}
+
+/* WebGL Unsupported Banner */
+#webgl-unsupported {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(13, 27, 42, 0.95);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  z-index: 999;
+}
+
+/* The playfield is intentionally landscape. On a portrait phone, protect
+   readability instead of shrinking the world and every touch target to dust. */
+#orientation-message {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(15, 30, 45, 0.94);
+}
+
+.orientation-card {
+  width: min(304px, 100%);
+  min-height: 120px;
+  padding: 30px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  color: var(--sprout-ink);
+  background: url('/assets/ui/dialogue/Premade dialog box medium.png') center / 100% 100% no-repeat;
+  image-rendering: pixelated;
+}
+
+.orientation-card strong {
+  font-size: 16px;
+}
+
+.orientation-card span {
+  font-family: 'SproutLandsSmall', monospace;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  #orientation-message {
+    display: flex;
+  }
+}
+
+/* Pocket Atlas & Quest Journal Styles */
+.atlas-modal-dialog {
+  max-width: 660px;
+  width: 95%;
+}
+
+.atlas-tabs-header {
+  display: flex;
+  gap: 8px;
+}
+
+.atlas-tab-btn {
+  background: #deb887;
+  border: 2px solid #784824;
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-family: 'SproutLands', monospace;
+  font-size: 14px;
+  color: #432c21;
+  cursor: pointer;
+}
+
+.atlas-tab-btn.active {
+  background: #739d42;
+  border-color: #2f5416;
+  color: #ffffff;
+  text-shadow: 1px 1px #1b350a;
+}
+
+.atlas-container, .journal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.atlas-location-banner {
+  background: #fdf5e6;
+  border: 2px solid #b87a4a;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #432c21;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.atlas-map-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.atlas-region-card {
+  background: #f7edd8;
+  border: 2px solid #8d623d;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.1s, border-color 0.1s;
+}
+
+.atlas-region-card:hover {
+  transform: translateY(-2px);
+  border-color: #558b2f;
+}
+
+.atlas-region-card.selected {
+  border-color: #558b2f;
+  background: #eef6e6;
+  box-shadow: 0 0 0 1px #558b2f;
+}
+
+.atlas-region-card.here {
+  border-color: #e65100;
+  background: #fff8e1;
+}
+
+.atlas-region-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.atlas-region-title {
+  font-weight: bold;
+  font-size: 12px;
+  color: #432c21;
+}
+
+.atlas-here-pill {
+  background: #e65100;
+  color: #ffffff;
+  font-size: 9px;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.atlas-region-sub {
+  font-size: 10px;
+  color: #6a4938;
+}
+
+.atlas-detail-card {
+  background: #fbf2e3;
+  border: 2px solid #8d623d;
+  border-radius: 4px;
+  padding: 10px 14px;
+}
+
+.atlas-detail-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #5a391d;
+  margin-bottom: 4px;
+}
+
+.atlas-detail-desc {
+  font-size: 12px;
+  color: #432c21;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.atlas-detail-meta {
+  font-size: 11px;
+  color: #6a4938;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* Journal Styles */
+.journal-quest-card {
+  background: #fbf2e3;
+  border: 2px solid #8d623d;
+  border-radius: 4px;
+  padding: 10px 14px;
+}
+
+.journal-quest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.journal-quest-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #5a391d;
+}
+
+.journal-status-pill {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.journal-status-pill.status-completed {
+  background: #558b2f;
+  color: #ffffff;
+}
+
+.journal-status-pill.status-active {
+  background: #f57c00;
+  color: #ffffff;
+}
+
+.journal-status-pill.status-not_started {
+  background: #8d8376;
+  color: #ffffff;
+}
+
+.journal-quest-desc {
+  font-size: 11px;
+  color: #432c21;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.journal-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px 10px;
+  font-size: 11px;
+}
+
+.journal-checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #7b5d49;
+}
+
+.journal-checklist-item.checked {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.journal-check-box {
+  font-weight: bold;
+}
+
+.journal-badges-shelf {
+  background: #edd8b4;
+  border: 2px solid #8d623d;
+  border-radius: 4px;
+  padding: 10px 14px;
+}
+
+.journal-shelf-title {
+  font-size: 13px;
+  font-weight: bold;
+  color: #5a391d;
+  margin-bottom: 8px;
+}
+
+.journal-badges-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.journal-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fbf2e3;
+  border: 2px solid #b87a4a;
+  border-radius: 4px;
+  padding: 6px 10px;
+}
+
+.journal-badge-item.unlocked {
+  border-color: #ffd54f;
+  background: #fffde7;
+  box-shadow: 0 0 6px rgba(255, 213, 79, 0.4);
+}
+
+.journal-badge-item.locked {
+  opacity: 0.55;
+  filter: grayscale(80%);
+}
+
+.badge-icon {
+  font-size: 20px;
+}
+
+.badge-title {
+  font-size: 12px;
+  font-weight: bold;
+  color: #432c21;
+}
+
+.badge-sub {
+  font-size: 10px;
+  color: #6a4938;
+}

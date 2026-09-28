@@ -1,0 +1,37 @@
+{
+  "questId": "quest_help_baby_ducks",
+  "version": "1.0.0",
+  "title": "Help the Baby Ducks Find Mom",
+  "giverNpcId": "npc_mama_duck",
+  "regionId": "region_west_meadow",
+  "summary": "Find Mama Duck's five scattered ducklings in the meadow and walk them home.",
+  "requiredFollowerCount": 5,
+  "objectives": [
+    {
+      "step": 1,
+      "type": "talk",
+      "targetEntityId": "npc_mama_duck",
+      "prompt": "Talk to Mama Duck at the meadow pond."
+    },
+    {
+      "step": 2,
+      "type": "gatherFollowers",
+      "targetEntityTag": "tag_duckling",
+      "count": 5,
+      "prompt": "Find 5 ducklings hidden around West End Meadow."
+    },
+    {
+      "step": 3,
+      "type": "escort",
+      "destinationAreaId": "area_mama_duck_pen",
+      "prompt": "Lead the ducklings back to Mama Duck's pen."
+    },
+    {
+      "step": 4,
+      "type": "reward",
+      "rewardItemId": "badge_duck_rescuer",
+      "rewardTitle": "Duckling Rescuer Badge",
+      "unlocksRoute": "route_central_bridge"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#33691e" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/png" href="assets/characters/capybara-natural-walk-8dir-3frame-128x48.png" />
+  <link rel="stylesheet" href="./src/style.css" />
+  <title>Sprout Lands: River Ribbon Adventure</title>
+</head>
+<body>
+  <div id="app">
+    <div id="game-container"></div>
+    <div id="webgl-unsupported">
+      <h1>WebGL Not Supported</h1>
+      <p>This adventure requires WebGL graphics to run properly. Please enable hardware acceleration in your browser settings or try using an updated browser.</p>
+    </div>
+    <div id="orientation-message" aria-live="polite">
+      <div class="orientation-card">
+        <strong>Turn your device sideways</strong>
+        <span>River Ribbon is an adventure best explored in landscape.</span>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

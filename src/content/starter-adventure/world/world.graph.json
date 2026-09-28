@@ -1,0 +1,105 @@
+{
+  "conceptId": "concept_3_river_ribbon",
+  "version": "1.0.0",
+  "name": "River Ribbon Overworld Graph",
+  "regions": [
+    {
+      "id": "region_west_meadow",
+      "name": "West End Meadow & Headwaters",
+      "sector": 1,
+      "type": "outdoor",
+      "description": "Broad agricultural pasture with the farmstead, windmill, and Mama Duck's pond.",
+      "spawnPoints": [
+        { "id": "spawn_farmstead", "x": 360, "y": 350, "default": true },
+        { "id": "spawn_from_canal_bridge", "x": 470, "y": 450 }
+      ],
+      "connections": [
+        { "targetRegionId": "region_central_town", "via": "west_timber_bridge", "type": "bridge" },
+        { "targetRegionId": "interior_farmhouse", "via": "farmhouse_door", "type": "door" },
+        { "targetRegionId": "interior_windmill", "via": "windmill_door", "type": "door" }
+      ],
+      "activities": ["gardening", "animal_care", "races", "fishing"]
+    },
+    {
+      "id": "region_pinecrest_foothills",
+      "name": "Pinecrest Foothills & Orchard Trail",
+      "sector": 2,
+      "type": "outdoor",
+      "description": "Rolling grassy slopes lined with apple trees and stone walls.",
+      "connections": [
+        { "targetRegionId": "region_west_meadow", "via": "foothill_gate", "type": "path" },
+        { "targetRegionId": "region_pinecrest_forest", "via": "mountain_trail", "type": "trail" },
+        { "targetRegionId": "region_central_town", "via": "town_north_road", "type": "road" }
+      ],
+      "activities": ["animal_spotting", "treasure_hunt"]
+    },
+    {
+      "id": "region_pinecrest_forest",
+      "name": "Pinecrest Forest & Ridge (Mont-Royal)",
+      "sector": 2,
+      "type": "outdoor",
+      "description": "Dense pine woods, rocky outcrop paths, and the clue search grounds for Lost in the Forest.",
+      "connections": [
+        { "targetRegionId": "region_pinecrest_foothills", "via": "mountain_trail", "type": "trail" },
+        { "targetRegionId": "special_crystal_cave", "via": "cave_entrance", "type": "cave" },
+        { "targetRegionId": "special_imp_glade", "via": "stepping_stones", "type": "quest_path" }
+      ],
+      "activities": ["bug_spotting", "photography", "treasure_hunt"]
+    },
+    {
+      "id": "region_central_town",
+      "name": "Central School Green & Town Common",
+      "sector": 2,
+      "type": "outdoor",
+      "description": "Village social hub featuring the schoolhouse, playground, bakery, and post office.",
+      "connections": [
+        { "targetRegionId": "region_west_meadow", "via": "west_timber_bridge", "type": "bridge" },
+        { "targetRegionId": "region_east_harbour", "via": "east_stone_bridge", "type": "bridge" },
+        { "targetRegionId": "region_south_wetlands", "via": "boardwalk_south", "type": "boardwalk" },
+        { "targetRegionId": "interior_schoolhouse", "via": "school_main_door", "type": "door" },
+        { "targetRegionId": "interior_bakery", "via": "bakery_door", "type": "door" },
+        { "targetRegionId": "interior_post_office", "via": "post_office_door", "type": "door" }
+      ],
+      "activities": ["playground", "deliveries", "gardening", "displays"]
+    },
+    {
+      "id": "region_south_wetlands",
+      "name": "South-Shore Wetlands & Reed Islets",
+      "sector": 3,
+      "type": "outdoor",
+      "description": "Interconnected wooden boardwalks over tidal marsh channels and bird blinds.",
+      "connections": [
+        { "targetRegionId": "region_central_town", "via": "boardwalk_south", "type": "boardwalk" },
+        { "targetRegionId": "interior_fisherman_shack", "via": "shack_door", "type": "door" }
+      ],
+      "activities": ["fishing", "animal_spotting", "cleanup"]
+    },
+    {
+      "id": "region_east_harbour",
+      "name": "East Pebble Beach & Harbour Promenade",
+      "sector": 3,
+      "type": "outdoor",
+      "description": "Sandy shoreline with tide pools, rowboat mooring, and lighthouse trail.",
+      "connections": [
+        { "targetRegionId": "region_central_town", "via": "east_stone_bridge", "type": "bridge" },
+        { "targetRegionId": "region_sanctuary_isle", "via": "sanctuary_ferry", "type": "ferry", "locked": true },
+        { "targetRegionId": "interior_lighthouse", "via": "lighthouse_door", "type": "door" }
+      ],
+      "activities": ["shell_collecting", "photography", "fishing"]
+    },
+    {
+      "id": "region_sanctuary_isle",
+      "name": "Northeast Sanctuary Isle (Gated)",
+      "sector": 3,
+      "type": "outdoor",
+      "description": "Peaceful botanical haven at the island's tapered eastern tip.",
+      "locked": true,
+      "unlockRequirement": "quests_completed:2",
+      "connections": [
+        { "targetRegionId": "region_east_harbour", "via": "sanctuary_ferry", "type": "ferry" },
+        { "targetRegionId": "interior_sanctuary_solarium", "via": "solarium_door", "type": "door" }
+      ],
+      "activities": ["photography", "displays"]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "River Ribbon Nature Palette",
+  "version": "1.0.0",
+  "tokens": {
+    "color": {
+      "water": "#19354e",
+      "waterLight": "#29b6f6",
+      "meadowGrass": "#9ccc65",
+      "forestPine": "#2e7d32",
+      "mountainRidge": "#546e7a",
+      "sandBeach": "#ffe082",
+      "panelBg": "#f7f5ed",
+      "panelBorder": "#795548",
+      "inkPrimary": "#2e1c14",
+      "inkMuted": "#6d5c52",
+      "accent": "#f57c00",
+      "focus": "#ffd54f",
+      "success": "#43a047",
+      "warning": "#e65100"
+    },
+    "typography": {
+      "bodyFont": "PixelFont8x14",
+      "labelFont": "PixelFont7x7",
+      "fallbackFont": "sans-serif"
+    },
+    "dimensions": {
+      "tileSize": 16,
+      "characterFrameSize": 16,
+      "minTouchTarget": 44,
+      "panelBorderRadius": 6
+    },
+    "motion": {
+      "transitionDurationMs": 250,
+      "cameraPanSpeed": 1.0
+    }
+  }
+}

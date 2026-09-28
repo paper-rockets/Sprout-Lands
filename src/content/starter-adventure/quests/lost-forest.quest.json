@@ -1,0 +1,44 @@
+{
+  "questId": "quest_lost_in_forest",
+  "version": "1.0.0",
+  "title": "Lost in the Forest",
+  "giverNpcId": "char_capybara_baker",
+  "regionId": "region_central_town",
+  "summary": "Follow clues through Pinecrest Forest to find the missing friend and guide them back.",
+  "cluesRequired": 4,
+  "objectives": [
+    {
+      "step": 1,
+      "type": "talk",
+      "targetEntityId": "char_capybara_baker",
+      "prompt": "Speak with the Baker in the Central Town Square."
+    },
+    {
+      "step": 2,
+      "type": "inspectClues",
+      "clueIds": ["clue_ribbon", "clue_pawprints", "clue_twigs", "clue_acorn"],
+      "prompt": "Search the mountain paths for 4 woodland clues."
+    },
+    {
+      "step": 3,
+      "type": "reveal",
+      "targetEntityId": "char_forest_imp",
+      "location": "special_imp_glade",
+      "prompt": "Find the Forest Imp in the secret pine glade."
+    },
+    {
+      "step": 4,
+      "type": "escort",
+      "targetEntityId": "char_forest_imp",
+      "destinationAreaId": "region_central_town",
+      "prompt": "Safely guide the Forest Imp across the bridge to Town Square."
+    },
+    {
+      "step": 5,
+      "type": "reward",
+      "rewardItemId": "badge_forest_navigator",
+      "rewardTitle": "Forest Navigator Compass",
+      "unlocksRoute": "route_east_stone_bridge"
+    }
+  ]
+}

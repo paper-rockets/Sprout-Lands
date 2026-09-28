@@ -1,0 +1,22 @@
+{
+  "name": "sprout-lands-adventure",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 8190 --strictPort --host 0.0.0.0",
+    "build": "npm run verify:reference-boundaries && vite build",
+    "preview": "vite preview --port 8190 --strictPort --host 0.0.0.0",
+    "test": "node test/run-tests.mjs",
+    "validate-content": "node scripts/validate-content.mjs",
+    "build:pwa": "node scripts/build-pwa-identity.mjs",
+    "inspect:tilemap": "node scripts/inspect-tilemap-reference.mjs",
+    "verify:reference-boundaries": "node scripts/inspect-tilemap-reference.mjs --verify-runtime --quiet"
+  },
+  "dependencies": {
+    "phaser": "^4.2.1"
+  },
+  "devDependencies": {
+    "vite": "^8.3.1"
+  }
+}

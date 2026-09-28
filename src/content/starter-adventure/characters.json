@@ -1,0 +1,64 @@
+{
+  "characters": [
+    {
+      "id": "char_capybara_natural",
+      "name": "Capybara",
+      "description": "A calm and friendly capybara ready to explore River Ribbon.",
+      "sheetPath": "assets/characters/capybara-natural-walk-8dir-3frame-128x48.png",
+      "frameWidth": 16,
+      "frameHeight": 16,
+      "availableAsPlayer": true,
+      "role": "player_default"
+    },
+    {
+      "id": "char_capybara_gardener",
+      "name": "Gardener Capybara",
+      "description": "Tends to the flowerbeds and helps Mama Duck look after ducklings.",
+      "sheetPath": "assets/characters/capybara-gardener-walk-8dir-3frame-128x48.png",
+      "frameWidth": 16,
+      "frameHeight": 16,
+      "availableAsPlayer": true,
+      "role": "npc_gardener"
+    },
+    {
+      "id": "char_capybara_baker",
+      "name": "Baker Capybara",
+      "description": "Bakes warm berry buns and coordinates errands across the island.",
+      "sheetPath": "assets/characters/capybara-baker-walk-8dir-3frame-128x48.png",
+      "frameWidth": 16,
+      "frameHeight": 16,
+      "availableAsPlayer": true,
+      "role": "npc_baker"
+    },
+    {
+      "id": "char_sky_puppy",
+      "name": "Sky Puppy",
+      "description": "A cheerful puppy companion with floppy ears and blue accents.",
+      "sheetPath": "assets/characters/sky-puppy-walk-8dir-3frame-128x48.png",
+      "frameWidth": 16,
+      "frameHeight": 16,
+      "availableAsPlayer": true,
+      "role": "companion"
+    },
+    {
+      "id": "char_long_ear_white_puppy",
+      "name": "Snowy Puppy",
+      "description": "A gentle companion with long ears who loves outdoor walks.",
+      "sheetPath": "assets/characters/long-ear-white-puppy-walk-8dir-3frame-128x48.png",
+      "frameWidth": 16,
+      "frameHeight": 16,
+      "availableAsPlayer": true,
+      "role": "companion"
+    },
+    {
+      "id": "char_forest_imp",
+      "name": "Forest Imp",
+      "description": "A shy woodland friend wearing a plum-hooded cloak with an acorn emblem.",
+      "sheetPath": "assets/characters/forest-imp-walk-8dir-3frame-128x48.png",
+      "frameWidth": 16,
+      "frameHeight": 16,
+      "availableAsPlayer": true,
+      "role": "npc_lost_friend"
+    }
+  ]
+}

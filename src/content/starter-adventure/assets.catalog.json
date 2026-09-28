@@ -1,0 +1,588 @@
+{
+  "schemaVersion": 1,
+  "about": "Every file the game ships from public/assets. Each entry names the pack it came from, its licence, and how it was prepared. Run `npm run sync-art` after changing this list; `npm run build` refuses files that are not listed here.",
+  "packs": {
+    "sprites-premium": {
+      "name": "Sprout Lands - Sprites - Premium pack",
+      "folder": "Sprout Lands - Sprites - premium pack",
+      "creator": "Cup Nooble",
+      "url": "https://cupnooble.itch.io/sprout-lands-asset-pack",
+      "license": "Sprout Lands Premium licence (paid). Commercial and non-commercial use allowed, modification allowed. The pack itself may not be resold or redistributed. No NFTs or AI training. Credit required.",
+      "commercialUse": true,
+      "credit": "Assets from Sprout Lands by Cup Nooble",
+      "evidence": [
+        "Bundled read_me.txt (Premium licence)",
+        "itch.io page: 'Premium version license (paying at least $3.99): This asset pack can be used in any commercial or non-commercial project'",
+        "Owner confirmed the paid Premium pack was purchased (2026-09-28)"
+      ]
+    },
+    "ui-premium": {
+      "name": "Sprout Lands - UI Pack - Premium pack",
+      "folder": "Sprout Lands - UI Pack - Premium pack/Sprout Lands - UI Pack - Premium pack",
+      "creator": "Cup Nooble",
+      "url": "https://cupnooble.itch.io/sprout-lands-ui-pack",
+      "license": "Sprout Lands Premium UI licence (paid). Commercial and non-commercial use allowed, modification allowed. The pack itself may not be resold or redistributed. No NFTs or AI training. Credit required.",
+      "commercialUse": true,
+      "credit": "UI from Sprout Lands UI Pack by Cup Nooble",
+      "evidence": [
+        "Bundled read_me.txt (Premium UI licence)",
+        "itch.io page: 'Premium version license (paying at least $3.99): This asset pack can be used in any commercial or non-commercial project'",
+        "Owner confirmed the paid Premium UI pack was purchased (2026-09-28)"
+      ]
+    },
+    "sorry-pack": {
+      "name": "Sprout Lands - Sorry pack (free gift)",
+      "folder": "Sprout Sorry pack/Sprout Sorry pack",
+      "creator": "Cup Nooble",
+      "url": "https://cupnooble.itch.io/sorry-package",
+      "license": "The bundled read_me.txt repeats the Basic (non-commercial) wording, but the creator has publicly confirmed on the itch.io page that the Sorry pack may be used in commercial games, as long as the pack itself is not resold or redistributed. Credit required.",
+      "commercialUse": true,
+      "credit": "Extra art and sounds from the Sprout Lands Sorry pack by Cup Nooble",
+      "evidence": [
+        "itch.io comment reply by Cup Nooble to Tommy7heCat (about 133 days before 2026-09-28): 'yes it can' (commercial projects)",
+        "itch.io comment reply by Cup Nooble to roytt (about 202 days before 2026-09-28): 'yes, you can use the sorry pack in a commercial game'",
+        "Checked on https://cupnooble.itch.io/sorry-package on 2026-09-28. For extra certainty, ask Cup Nooble for written confirmation (Discord: cup_nooble)."
+      ]
+    },
+    "generated-characters": {
+      "name": "Generated Characters (project-owned)",
+      "folder": "Generated Characters",
+      "creator": "Commissioned for this project (image generation guided by Sprout Lands style)",
+      "url": "",
+      "license": "Project-owned original character sheets made for this game. See Generated Characters/README.md for how they were made.",
+      "commercialUse": true,
+      "credit": "",
+      "evidence": [
+        "Generated Characters/README.md"
+      ]
+    }
+  },
+  "excludedPacks": {
+    "Sprout Lands - UI Pack - Basic pack": "Free Basic licence is non-commercial. Everything useful in it is also in the paid Premium UI pack, so nothing is taken from here.",
+    "Sprout-Lands-Tilemap-0.2.0": "Godot add-on. Its code is MIT (ideas only, nothing copied); its art is the free Basic pack (non-commercial). Nothing is taken from here.",
+    "Sprout-Lands-UI-0.2.0": "Godot add-on. MIT code plus free Basic UI art. Nothing is taken from here."
+  },
+  "files": [
+    {
+      "path": "assets/characters/capybara-natural.png",
+      "pack": "generated-characters",
+      "source": "capybara-natural-walk-8dir-3frame-128x48.png",
+      "role": "runtime",
+      "use": "player / villager"
+    },
+    {
+      "path": "assets/characters/capybara-gardener.png",
+      "pack": "generated-characters",
+      "source": "capybara-gardener-walk-8dir-3frame-128x48.png",
+      "role": "runtime",
+      "use": "player / gardener"
+    },
+    {
+      "path": "assets/characters/capybara-baker.png",
+      "pack": "generated-characters",
+      "source": "capybara-baker-walk-8dir-3frame-128x48.png",
+      "role": "runtime",
+      "use": "player / baker"
+    },
+    {
+      "path": "assets/characters/sky-puppy.png",
+      "pack": "generated-characters",
+      "source": "sky-puppy-walk-8dir-3frame-128x48.png",
+      "role": "runtime",
+      "use": "player / villager"
+    },
+    {
+      "path": "assets/characters/long-ear-puppy.png",
+      "pack": "generated-characters",
+      "source": "long-ear-white-puppy-walk-8dir-3frame-128x48.png",
+      "role": "runtime",
+      "use": "player / villager"
+    },
+    {
+      "path": "assets/characters/forest-imp.png",
+      "pack": "generated-characters",
+      "source": "forest-imp-walk-8dir-3frame-128x48.png",
+      "role": "runtime",
+      "use": "player / lost friend"
+    },
+    {
+      "path": "assets/animals/hen.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Chicken/chicken default.png",
+      "role": "runtime",
+      "use": "Mama Hen"
+    },
+    {
+      "path": "assets/animals/chick.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Chicken_Baby/Chicken_Baby.png",
+      "role": "runtime",
+      "use": "chicks to find"
+    },
+    {
+      "path": "assets/animals/cow.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Cow/Light cow animations.png",
+      "role": "runtime",
+      "use": "farm animal"
+    },
+    {
+      "path": "assets/animals/frog.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/frog/frog_spritesheet.png",
+      "role": "runtime",
+      "use": "fishing cove frog"
+    },
+    {
+      "path": "assets/tiles/water.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/ground tiles/Water.png",
+      "role": "runtime",
+      "use": "animated water"
+    },
+    {
+      "path": "assets/tiles/grass.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/ground tiles/New tiles/Grass_tiles_v2.png",
+      "role": "runtime",
+      "use": "island ground with stone rim"
+    },
+    {
+      "path": "assets/tiles/hill.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/ground tiles/New tiles/Grass_Hill_Tiles_v2.png",
+      "role": "runtime",
+      "use": "raised grass with cliff"
+    },
+    {
+      "path": "assets/tiles/grass-layer.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/ground tiles/New tiles/Grass_Tile_Layers.png",
+      "role": "runtime",
+      "use": "soft grass edges over paths"
+    },
+    {
+      "path": "assets/tiles/soil.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/ground tiles/New tiles/Soil_Ground_Tiles.png",
+      "role": "runtime",
+      "use": "paths, sand and fields"
+    },
+    {
+      "path": "assets/tiles/hedge.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/ground tiles/New tiles/Bush_Tiles.png",
+      "role": "runtime",
+      "use": "hedge walls"
+    },
+    {
+      "path": "assets/tiles/snow.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Sprout winter/snow tiles 1.png",
+      "role": "runtime",
+      "use": "frosty island ground"
+    },
+    {
+      "path": "assets/tiles/stairs.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/ground tiles/New tiles/Grass_Hill_Tiles_Slopes v.2.png",
+      "role": "runtime",
+      "use": "hill stairs"
+    },
+    {
+      "path": "assets/tiles/fences.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Fences.png",
+      "role": "runtime",
+      "use": "fences"
+    },
+    {
+      "path": "assets/tiles/bridge.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Wooden_Bridge_v2.png",
+      "role": "runtime",
+      "use": "bridges and piers"
+    },
+    {
+      "path": "assets/tiles/stone-path.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Stone_Path.png",
+      "role": "runtime",
+      "use": "stepping stones"
+    },
+    {
+      "path": "assets/tiles/house-walls.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Wooden_House_Walls_Tilset.png",
+      "role": "runtime",
+      "use": "open-top rooms"
+    },
+    {
+      "path": "assets/objects/trees.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Trees, stumps and bushes.png",
+      "role": "runtime",
+      "use": "trees, bushes, stumps"
+    },
+    {
+      "path": "assets/objects/pines.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Pine Tree Biome.png",
+      "role": "runtime",
+      "use": "pine forest"
+    },
+    {
+      "path": "assets/objects/blossoms.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Cherry Blossom Biom.png",
+      "role": "runtime",
+      "use": "blossom island"
+    },
+    {
+      "path": "assets/objects/plants.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Mushrooms, Flowers, Stones.png",
+      "role": "runtime",
+      "use": "flowers, mushrooms, rocks"
+    },
+    {
+      "path": "assets/objects/water-plants.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Water Objects.png",
+      "role": "runtime",
+      "use": "lily pads, water rocks"
+    },
+    {
+      "path": "assets/objects/reeds.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Pine Tree Biome water plants.png",
+      "role": "runtime",
+      "use": "reeds"
+    },
+    {
+      "path": "assets/objects/boats.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Boats.png",
+      "role": "runtime",
+      "use": "rowboats and ferry"
+    },
+    {
+      "path": "assets/objects/signs.png",
+      "pack": "sprites-premium",
+      "source": "Objects/signs.png",
+      "role": "runtime",
+      "use": "signposts"
+    },
+    {
+      "path": "assets/objects/chest.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Chest.png",
+      "role": "runtime",
+      "use": "reward chest"
+    },
+    {
+      "path": "assets/objects/well.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Water well.png",
+      "role": "runtime",
+      "use": "town well"
+    },
+    {
+      "path": "assets/objects/picnic-blanket.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Piknik blanket.png",
+      "role": "runtime",
+      "use": "picnic"
+    },
+    {
+      "path": "assets/objects/picnic-basket.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Piknik basket.png",
+      "role": "runtime",
+      "use": "picnic / clue"
+    },
+    {
+      "path": "assets/objects/furniture.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Basic_Furniture.png",
+      "role": "runtime",
+      "use": "room furniture"
+    },
+    {
+      "path": "assets/objects/furniture-wood.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Furniture/new Wooden Furniture.png",
+      "role": "runtime",
+      "use": "room furniture"
+    },
+    {
+      "path": "assets/objects/farm-plants.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Farming Plants.png",
+      "role": "runtime",
+      "use": "crop fields"
+    },
+    {
+      "path": "assets/objects/wood-shrooms.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/wood n shroms.png",
+      "role": "runtime",
+      "use": "forest clues"
+    },
+    {
+      "path": "assets/objects/houses.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Village pack/houses/small house/small_House_with_door_grass.png",
+      "role": "runtime",
+      "use": "village houses"
+    },
+    {
+      "path": "assets/objects/huts.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Village pack/houses/small hut/small_huts_with_doors_grass.png",
+      "role": "runtime",
+      "use": "huts"
+    },
+    {
+      "path": "assets/objects/brick-houses.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Village pack/houses/Grey brick house/grey_brick_houses_with_doors_grass.png",
+      "role": "runtime",
+      "use": "school"
+    },
+    {
+      "path": "assets/objects/chicken-houses.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Animal Structures/Chikcen_Houses.png",
+      "role": "runtime",
+      "use": "Mama Hen's coop"
+    },
+    {
+      "path": "assets/objects/winter.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Sprout winter/winter sprites.png",
+      "role": "runtime",
+      "use": "snowy trees, snowman"
+    },
+    {
+      "path": "assets/objects/campfire.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Sprout winter/campfire.png",
+      "role": "runtime",
+      "use": "campfire"
+    },
+    {
+      "path": "assets/tiles/ice.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Sprout winter/ice tiles.png",
+      "role": "runtime",
+      "use": "frozen pond"
+    },
+    {
+      "path": "assets/objects/xmas-tree.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Sprout winter/christmas tree.png",
+      "role": "runtime",
+      "use": "twinkling tree"
+    },
+    {
+      "path": "assets/objects/fire.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Sprout winter/fire animation.png",
+      "role": "runtime",
+      "use": "campfire flames"
+    },
+    {
+      "path": "assets/objects/beehive.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Bee/beehive.png",
+      "role": "runtime",
+      "use": "beehive"
+    },
+    {
+      "path": "assets/animals/bee.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Bee/small_bee_spritesheet.png",
+      "role": "runtime",
+      "use": "buzzing bees"
+    },
+    {
+      "path": "assets/ui/dialog-portrait.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Dialouge UI/Premade dialog box  big.png",
+      "role": "runtime",
+      "use": "dialogue box with portrait"
+    },
+    {
+      "path": "assets/ui/dialog-medium.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Dialouge UI/Premade dialog box medium.png",
+      "role": "runtime",
+      "use": "player card"
+    },
+    {
+      "path": "assets/ui/speech.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Dialouge UI/dialog box big.png",
+      "role": "runtime",
+      "use": "objective and prompt panels"
+    },
+    {
+      "path": "assets/ui/continue.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Dialouge UI/dialog box character finished talking click to continue indicator - spritesheet .png",
+      "role": "runtime",
+      "use": "dialogue continue arrow"
+    },
+    {
+      "path": "assets/ui/backdrops.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Dialouge UI/Character Backdrop-frame/character_backdrops.png",
+      "role": "runtime",
+      "use": "portrait frames"
+    },
+    {
+      "path": "assets/ui/icons.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Icons/All Icons.png",
+      "role": "runtime",
+      "use": "small icons"
+    },
+    {
+      "path": "assets/ui/icon-buttons.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/buttons/Icon Buttons/Icon Buttons Spritesheet.png",
+      "role": "runtime",
+      "use": "HUD buttons"
+    },
+    {
+      "path": "assets/ui/square-buttons.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/buttons/square/Square Buttons 26x26.png",
+      "role": "runtime",
+      "use": "menu buttons"
+    },
+    {
+      "path": "assets/ui/checks.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Other UI sprites/Xs and check marks/Xs and check marks.png",
+      "role": "runtime",
+      "use": "check and close marks"
+    },
+    {
+      "path": "assets/ui/sliders.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Other UI sprites/Sliders/Sliders.png",
+      "role": "runtime",
+      "use": "volume slider"
+    },
+    {
+      "path": "assets/ui/stars.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Icons/special icons/stars.png",
+      "role": "runtime",
+      "use": "rewards"
+    },
+    {
+      "path": "assets/ui/panel.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Other UI sprites/Setting menu.png",
+      "role": "runtime",
+      "use": "menu panels"
+    },
+    {
+      "path": "assets/fonts/sprout-8x14.ttf",
+      "pack": "ui-premium",
+      "source": "fonts/Font files TTF/pixelFont-7-8x14-sproutLands.ttf",
+      "role": "runtime",
+      "use": "body text"
+    },
+    {
+      "path": "assets/fonts/sprout-7x7.ttf",
+      "pack": "ui-premium",
+      "source": "fonts/Font files TTF/pixelFont-4-7x7-sproutLands.ttf",
+      "role": "runtime",
+      "use": "labels"
+    },
+    {
+      "path": "assets/audio/talk.wav",
+      "pack": "sorry-pack",
+      "source": "Audio/bip_1.wav",
+      "role": "runtime",
+      "use": "dialogue blip",
+      "process": {
+        "trim": 0.3
+      }
+    },
+    {
+      "path": "assets/audio/found.wav",
+      "pack": "sorry-pack",
+      "source": "Audio/bing_1.wav",
+      "role": "runtime",
+      "use": "clue found",
+      "process": {
+        "trim": 0.8
+      }
+    },
+    {
+      "path": "assets/audio/peep.wav",
+      "pack": "sorry-pack",
+      "source": "Audio/squick_squick_1.wav",
+      "role": "runtime",
+      "use": "chick joins",
+      "process": {
+        "trim": 0.45
+      }
+    },
+    {
+      "path": "assets/audio/splash.wav",
+      "pack": "sorry-pack",
+      "source": "Audio/blup_1.wav",
+      "role": "runtime",
+      "use": "water, doors",
+      "process": {
+        "trim": 0.2
+      }
+    },
+    {
+      "path": "assets/audio/step.wav",
+      "pack": "sorry-pack",
+      "source": "Audio/squick_1.wav",
+      "role": "runtime",
+      "use": "menu tap",
+      "process": {
+        "trim": 0.15
+      }
+    },
+    {
+      "path": "assets/audio/tune.wav",
+      "pack": "sorry-pack",
+      "source": "Audio/flute_1.wav",
+      "role": "runtime",
+      "use": "quest step done",
+      "process": {
+        "trim": 1.35
+      }
+    },
+    {
+      "path": "assets/audio/fanfare.wav",
+      "pack": "sorry-pack",
+      "source": "Audio/flute_3.wav",
+      "role": "runtime",
+      "use": "quest complete",
+      "process": {
+        "trim": 1.35
+      }
+    },
+    {
+      "path": "assets/audio/locked.wav",
+      "pack": "sorry-pack",
+      "source": "Audio/boo_1.wav",
+      "role": "runtime",
+      "use": "locked route",
+      "process": {
+        "trim": 0.8
+      }
+    }
+  ]
+}
