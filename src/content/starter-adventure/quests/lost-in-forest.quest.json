@@ -1,0 +1,66 @@
+{
+  "about": "Pudding's friend went mushroom picking in the west woods and got lost. Look at three clues (things with a star over them); then the lost friend turns up in the clearing and follows you back to Pudding's cottage. The people and clues themselves are in world/regions/woods.json (written by scripts/tools/map-authoring/woods_objects.py). {@forest-imp} is the lost friend's name.",
+  "id": "lost-in-forest",
+  "title": "Lost in the Forest",
+  "giver": "forest-pudding",
+  "icon": "forest-imp",
+  "reward": { "stars": 1, "hearts": 3, "coins": 15, "items": { "emerald": 1 } },
+  "steps": [
+    {
+      "id": "meet",
+      "type": "talk",
+      "target": "forest-pudding",
+      "icon": "pudding-pup",
+      "objective": "Talk to {@forest-pudding}",
+      "say": [
+        "OH, {name}! I'M SO GLAD TO SEE YOU.",
+        "{@forest-imp} WENT MUSHROOM PICKING THIS MORNING AND HASN'T COME HOME!",
+        "COULD YOU LOOK FOR CLUES IN THE WOODS? THINGS WITH A LITTLE STAR OVER THEM MIGHT HELP."
+      ]
+    },
+    {
+      "id": "clues",
+      "type": "inspectClues",
+      "clues": ["forest-basket", "forest-mushrooms", "forest-footprints"],
+      "objective": "Look for clues in the woods ({have} of {need})",
+      "hints": {
+        "forest-pudding": [
+          "YOU FOUND {have} OF {need} CLUES. KEEP LOOKING, {name}!",
+          "{@forest-imp} LOVES THE STREAM AND THE BIG RED MUSHROOMS."
+        ],
+        "gardener": ["THE LITTLE ONE FROM THE WOODS? I SAW THEM SKIPPING PAST WITH A BASKET THIS MORNING."],
+        "mama-hen": ["CLUCK! I HEARD LITTLE FOOTSTEPS GOING INTO THE WOODS."]
+      },
+      "say": ["(SHH... LISTEN! A LITTLE SNIFFLE IS COMING FROM THE QUIET CLEARING.)"]
+    },
+    {
+      "id": "find",
+      "type": "gatherFollowers",
+      "tag": "lost-friend",
+      "count": 1,
+      "icon": "forest-imp",
+      "objective": "Find {@forest-imp} in the clearing"
+    },
+    {
+      "id": "home",
+      "type": "escort",
+      "tag": "lost-friend",
+      "count": 1,
+      "to": "forest-pudding",
+      "radius": 3,
+      "icon": "pudding-pup",
+      "objective": "Walk {@forest-imp} home to {@forest-pudding}",
+      "effects": [{ "type": "sendHome", "tag": "lost-friend" }]
+    }
+  ],
+  "complete": {
+    "speaker": "forest-pudding",
+    "say": [
+      "{@forest-imp}! YOU'RE HOME!",
+      "THANK YOU, {name}. YOU FOLLOWED EVERY CLUE, LIKE A REAL DETECTIVE.",
+      "PLEASE TAKE THIS SHINY EMERALD. WE FOUND IT DEEP IN THE WOODS.",
+      "OH, AND I PUSHED THAT OLD MOSSY LOG OFF THE LITTLE BRIDGE BY MUSHROOM ISLE. I WONDER WHAT'S HIDING OVER THERE..."
+    ],
+    "effects": [{ "type": "unlock", "route": "secret-cove", "notice": "Secret Cove" }]
+  }
+}

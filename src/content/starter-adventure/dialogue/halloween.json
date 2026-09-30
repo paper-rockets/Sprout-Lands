@@ -1,0 +1,24 @@
+{
+  "about": "What friends in Pumpkin Hollow (the Halloween island) say. First matching entry wins; the last has no condition.",
+  "cat-patch": [
+    { "say": ["HI {name}! I'M {@cat-patch}. DO YOU LIKE MY PUMPKIN HAT?", "I LOOK AFTER THE PUMPKIN PATCH. SOME OF THESE PUMPKINS ARE BIGGER THAN ME!"] }
+  ],
+  "cat-hazel": [
+    { "say": ["HEE HEE! I'M {@cat-hazel}, AND I'M PRACTISING BROOM TRICKS.", "DON'T TELL ANYONE, {name}... I CAN'T QUITE FLY YET! THE CAULDRON ONLY MAKES PUMPKIN SOUP."] }
+  ],
+  "cat-flit": [
+    { "say": ["HI {name}! I'M {@cat-flit}. I'M NOT A REAL BAT, BUT I LOVE MY WINGS.", "THE HAUNTED HOUSE ISN'T SCARY AT ALL. THE GHOSTS INSIDE JUST WANT SOMEONE TO PLAY WITH!"] }
+  ],
+  "cat-luna": [
+    { "say": ["HELLO, {name}. I'M {@cat-luna}.", "AT NIGHT THE MOON SITS RIGHT IN THE MIDDLE OF THIS POND. THE OWL ON THE LITTLE ISLAND WATCHES IT WITH ME."] }
+  ],
+  "ghost-boo": [
+    { "say": ["BOO! HEE HEE, DID I SURPRISE YOU? I'M {@ghost-boo}!", "WELCOME TO PUMPKIN HOLLOW, {name}! WALK THROUGH THE BIG ARCH AND SAY HELLO TO EVERYONE."] }
+  ],
+  "ghost-misty": [
+    { "say": ["OOOH, HELLO {name}. I'M {@ghost-misty}. I LOOK AFTER THE GRAVEYARD.", "IT'S VERY QUIET HERE. THE CROWS AND I PLAY HIDE AND SEEK BEHIND THE STONES."] }
+  ],
+  "ghost-giggles": [
+    { "say": ["HEE HEE HEE! I'M {@ghost-giggles}! I LIVE IN THE HAUNTED HOUSE.", "I'M NOT VERY GOOD AT SCARING. I JUST START GIGGLING! HEE HEE!"] }
+  ]
+}

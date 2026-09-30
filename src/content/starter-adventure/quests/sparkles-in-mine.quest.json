@@ -1,0 +1,54 @@
+{
+  "about": "Miner Moss (by the old mine's stone arch in the Pine Hills, east.json) lost three shiny crystals in the Old Mine. They lie on the cave floor only while this quest is on (world/rooms/old-mine.json, written by scripts/tools/map-authoring/rooms_v1.py: mine-crystal-1..3). Pick all three up, then bring them back to Miner Moss.",
+  "id": "sparkles-in-mine",
+  "title": "Sparkles in the Mine",
+  "giver": "east-miner",
+  "icon": "amethyst",
+  "reward": { "stars": 1, "hearts": 2, "coins": 15, "items": { "amethyst": 1 } },
+  "steps": [
+    {
+      "id": "meet",
+      "type": "talk",
+      "target": "east-miner",
+      "icon": "amethyst",
+      "objective": "Talk to {@east-miner}",
+      "say": [
+        "HELLO, {name}! I'M {@east-miner}. THAT STONE ARCH UP THE TRAIL IS THE OLD MINE.",
+        "OH DEAR, I DROPPED THREE SHINY CRYSTALS IN THERE THIS MORNING. MY LAMP WENT OUT AND I COULDN'T FIND THEM!",
+        "COULD YOU LOOK FOR THEM? DON'T WORRY ABOUT THE BATS AND SLIMES: THEY'RE FRIENDLY AND JUST WANT TO SAY HELLO."
+      ]
+    },
+    {
+      "id": "find",
+      "type": "collect",
+      "items": ["mine-crystal-1", "mine-crystal-2", "mine-crystal-3"],
+      "icon": "amethyst",
+      "objective": "Find shiny crystals in the Old Mine ({have} of {need})",
+      "hints": {
+        "east-miner": [
+          "YOU FOUND {have} OF {need} CRYSTALS. KEEP LOOKING, {name}!",
+          "LOOK BY THE RAILS, UP IN THE TOP TUNNEL, AND IN THE LITTLE CORNER BEHIND THE WORKBENCH."
+        ]
+      },
+      "say": ["(THAT'S ALL THREE CRYSTALS! TIME TO SHOW {@east-miner}.)"]
+    },
+    {
+      "id": "back",
+      "type": "deliver",
+      "target": "east-miner",
+      "items": ["mine-crystal-1", "mine-crystal-2", "mine-crystal-3"],
+      "icon": "amethyst",
+      "objective": "Bring the crystals back to {@east-miner}",
+      "say": [
+        "MY CRYSTALS! ALL THREE OF THEM! LOOK HOW THEY SPARKLE.",
+        "DID YOU MEET THE BATS AND THE SLIMES? THEY KEEP ME COMPANY DOWN THERE."
+      ]
+    }
+  ],
+  "complete": {
+    "speaker": "east-miner",
+    "say": [
+      "PLEASE KEEP THIS ONE, {name}. EVERY GREAT EXPLORER NEEDS A LUCKY CRYSTAL!"
+    ]
+  }
+}

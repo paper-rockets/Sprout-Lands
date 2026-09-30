@@ -1,0 +1,41 @@
+{
+  "id": "blue-house",
+  "name": "Blue House",
+  "about": "An ordinary cosy home in Cobble Village (the blue house on the top street).",
+  "style": "wood-plank",
+  "door": {"region": "east", "at": [8, 34]},
+  "exit": [4, 7],
+  "map": [
+    "WWWWWWWWWW",
+    "WWWWWWWWWW",
+    "W________W",
+    "W________W",
+    "W________W",
+    "W________W",
+    "W________W",
+    "WWWW_WWWWW"
+  ],
+  "objects": [
+    {"type": "wall_picture_night", "at": [3, 1]},
+    {"type": "wall_picture_field", "at": [6, 1]},
+    {"type": "bed_light_blue", "at": [1, 2]},
+    {"type": "lamp_blue", "at": [2, 2]},
+    {"type": "grandfather_clock", "at": [7, 2]},
+    {"type": "dresser_light", "at": [8, 2]},
+    {"type": "chair_light_r", "at": [4, 4]},
+    {"type": "table_light", "at": [5, 4]},
+    {"type": "chair_light_l", "at": [6, 4]},
+    {"type": "table_pie", "at": [5, 5]},
+    {"type": "armchair_light", "at": [8, 4]},
+    {"type": "stool_pink", "at": [2, 6]},
+    {"type": "plant_pot_flower", "at": [7, 6]},
+    {"type": "plant_pot_small", "at": [1, 6]},
+    {"type": "plant_pot_big", "at": [8, 6]},
+    {"type": "mat_blue", "at": [4, 6]},
+    {"type": "rug_green", "at": [5, 4]},
+    {"type": "chest", "at": [1, 4]}
+  ],
+  "interactables": [
+    {"id": "blue-house-chest", "kind": "chest", "color": "oak", "at": [1, 4], "reward": {"coins": [3, 6]}}
+  ]
+}

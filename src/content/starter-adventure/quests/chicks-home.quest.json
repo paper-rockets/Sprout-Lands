@@ -1,0 +1,63 @@
+{
+  "about": "Mama Hen's three baby chicks are lost around the farm. Talk to a chick and it follows you; walk them into the coop to bring them home. The chicks themselves (names, where they hide, what they say) are in world/regions/farm.json (written by scripts/tools/map-authoring/farm_objects.py).",
+  "id": "chicks-home",
+  "title": "Help the Baby Chicks Find Mom",
+  "giver": "mama-hen",
+  "icon": "animal-chick",
+  "reward": { "stars": 1, "hearts": 3, "coins": 10, "items": { "diamond": 1 } },
+  "steps": [
+    {
+      "id": "meet",
+      "type": "talk",
+      "target": "mama-hen",
+      "icon": "animal-hen",
+      "objective": "Talk to Mama Hen",
+      "say": [
+        "CLUCK CLUCK! OH, HELLO {name}!",
+        "MY THREE BABY CHICKS WANDERED OFF, AND I CAN'T FIND THEM ANYWHERE!",
+        "PIP LOVES THE POND. NUTMEG LOVES PUMPKINS. AND ROSIE LOVES PINK FLOWERS.",
+        "WHEN YOU FIND ONE, SAY HELLO. IT WILL FOLLOW YOU HOME!"
+      ]
+    },
+    {
+      "id": "find",
+      "type": "gatherFollowers",
+      "tag": "chick",
+      "count": 3,
+      "icon": "animal-chick",
+      "objective": "Find the baby chicks ({have} of {need})",
+      "hints": {
+        "mama-hen": [
+          "YOU FOUND {have} OF MY {need} CHICKS! KEEP LOOKING, {name}.",
+          "PIP LOVES THE POND. NUTMEG LOVES PUMPKINS. ROSIE LOVES THE PINK TREES OVER THE BRIDGE."
+        ],
+        "gardener": [
+          "A LOST CHICK? I HEARD PEEPING BY MY PUMPKINS!",
+          "AND THERE'S A PEEPY LITTLE ONE NEAR THE POND, TOO."
+        ]
+      }
+    },
+    {
+      "id": "home",
+      "type": "escort",
+      "tag": "chick",
+      "count": 3,
+      "to": "mama-hen",
+      "radius": 4,
+      "icon": "animal-hen",
+      "objective": "Take the chicks home to Mama Hen",
+      "hints": {
+        "gardener": ["WHAT A PARADE! MAMA HEN IS IN THE COOP, JUST WEST OF THE HOUSE."]
+      },
+      "effects": [{ "type": "sendHome", "tag": "chick" }]
+    }
+  ],
+  "complete": {
+    "speaker": "mama-hen",
+    "say": [
+      "MY BABIES! PIP, NUTMEG AND ROSIE, ALL SAFE AND SOUND!",
+      "THANK YOU, {name}. YOU ARE THE KINDEST FRIEND ON THE FARM.",
+      "HERE IS A LITTLE PRESENT FOR YOU. CLUCK!"
+    ]
+  }
+}

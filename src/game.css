@@ -1,0 +1,94 @@
+/* The 'Sprout' pixel font is loaded from assets/fonts by main.js. */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #9bd4c3;
+  color: #5a3e2b;
+  font-family: 'Sprout', monospace;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#game {
+  position: fixed;
+  inset: 0;
+}
+
+#game canvas {
+  display: block;
+  image-rendering: pixelated;
+}
+
+#no-webgl,
+#turn-sideways {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100; /* above the start screen's name box (.name-input, z-index 10) */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  text-align: center;
+  background: #9bd4c3;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+body.no-webgl #no-webgl {
+  display: flex;
+}
+
+@media (orientation: portrait) and (max-width: 760px) {
+  #turn-sideways {
+    display: flex;
+  }
+}
+
+/* The name box on the start screen is a real text field (so phones show their keyboard);
+   the game draws the wooden box behind it and this styles the letters. */
+.name-input {
+  position: fixed;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #6b4b5b;
+  caret-color: #6b4b5b;
+  font-family: 'Sprout', monospace;
+  font-weight: normal;
+  user-select: text;
+  -webkit-user-select: text;
+  touch-action: auto;
+}
+
+.name-input::placeholder {
+  color: #90625d;
+  opacity: 0.8;
+}
+
+/* Cat-paw mouse cursors (set up by engine/boot/cursors.js; only where there is a mouse). */
+.paw-cursor #game canvas {
+  cursor: var(--cursor-normal) !important;
+}
+
+.paw-cursor #game canvas.over-button {
+  cursor: var(--cursor-point) !important;
+}
+
+.paw-cursor #game canvas.pressing {
+  cursor: var(--cursor-hold) !important;
+}

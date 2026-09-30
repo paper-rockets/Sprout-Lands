@@ -1,0 +1,55 @@
+{
+  "id": "baker-house",
+  "name": "Baker Bun's House",
+  "about": "Baker Bun's home and bakery in Cobble Village (the yellow house). Bun stands behind the counter (the shop) next to the brick oven (cooking); while the village picnic is set out, Bun is at the picnic instead.",
+  "style": "wood-brick",
+  "door": {"region": "east", "at": [29, 34]},
+  "exit": [5, 8],
+  "map": [
+    "WWWWWWWWWWWW",
+    "WWWWWWWWWWWW",
+    "W__________W",
+    "W__________W",
+    "W__________W",
+    "W__________W",
+    "W__________W",
+    "W__________W",
+    "WWWWW_WWWWWW"
+  ],
+  "objects": [
+    {"type": "wall_picture_flowers", "at": [3, 1]},
+    {"type": "wall_clock", "at": [5, 1]},
+    {"type": "wall_clock_small", "at": [7, 1]},
+    {"type": "wall_picture_field", "at": [10, 1]},
+    {"type": "counter_bun", "at": [6, 3]},
+    {"type": "counter_honey", "at": [7, 3]},
+    {"type": "bed_light_pink", "at": [1, 2]},
+    {"type": "lamp_pink", "at": [2, 2]},
+    {"type": "dresser_light", "at": [4, 2]},
+    {"type": "rug_pink", "at": [3, 5]},
+    {"type": "chair_light_r", "at": [2, 5]},
+    {"type": "table_light", "at": [3, 5]},
+    {"type": "chair_light_l", "at": [4, 5]},
+    {"type": "table_bun", "at": [3, 6]},
+    {"type": "plant_pot_flower", "at": [10, 4]},
+    {"type": "shelf_light", "at": [1, 7]},
+    {"type": "picnic_basket", "at": [9, 7]},
+    {"type": "plant_pot_big", "at": [10, 7]},
+    {"type": "mat_green", "at": [5, 7]},
+    {"type": "picnic_blanket", "at": [8, 6]},
+    {"type": "picnic_cake", "at": [7, 5]},
+    {"type": "picnic_tart", "at": [8, 4]},
+    {"type": "picnic_muffin", "at": [9, 6]},
+    {"type": "chest", "at": [10, 5]}
+  ],
+  "npcs": [
+    {"id": "baker-bun", "name": "Baker Bun", "character": "tabby-cat", "alt": {"character": "sky-puppy", "name": "Baker Sky"}, "dialogue": "baker-bun", "facing": "down", "at": [6, 2], "hiddenWhen": {"flag": "picnic-ready"}, "favourite": {"treat": "food-toast", "say": "HONEY TOAST! I BAKE ALL DAY, BUT NOBODY EVER BAKES FOR ME. THANK YOU, {name}!", "hint": "A BAKER'S SECRET: MY FAVOURITE TREAT IS THE SIMPLEST ONE. WARM HONEY TOAST!", "gift": {"coins": 5}, "giftSay": "PLEASE TAKE THESE COINS. BUY SOMETHING YUMMY AT MY COUNTER!"}}
+  ],
+  "entities": [
+    {"id": "baker-counter", "name": "Bakery counter", "kind": "shop", "shop": "bakery", "object": "shelf_light", "at": [6, 3], "solid": true},
+    {"id": "baker-oven", "name": "Brick oven", "kind": "oven", "object": "oven", "at": [8, 2], "solid": true}
+  ],
+  "interactables": [
+    {"id": "baker-chest", "kind": "chest", "color": "cherry", "at": [10, 5], "reward": {"coins": [4, 8], "item": "raspberry"}}
+  ]
+}

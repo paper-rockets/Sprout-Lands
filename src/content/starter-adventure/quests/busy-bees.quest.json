@@ -1,0 +1,62 @@
+{
+  "about": "The gardener's plants have no visitors and the bees at the orchard hive have stopped making honey. Water five plants (any crops, each counts once), collect honey from the hive by the orchard, and bring it to the gardener. Watering is in engine/systems/Pickups.js (water); the hive is the one in world/regions/farm.json.",
+  "id": "busy-bees",
+  "title": "Busy Bees",
+  "giver": "gardener",
+  "icon": "gardener",
+  "reward": { "stars": 1, "hearts": 2, "coins": 12, "items": { "honey": 2 } },
+  "steps": [
+    {
+      "id": "meet",
+      "type": "talk",
+      "target": "gardener",
+      "icon": "gardener",
+      "objective": "Talk to {@gardener}",
+      "say": [
+        "OH, {name}! THE BEES HAVE STOPPED VISITING MY PLANTS.",
+        "THE PLANTS ARE TOO THIRSTY TO MAKE ANY NECTAR!",
+        "MY WATERING CAN IS ON THE GROUND RIGHT NEXT TO ME. PICK IT UP, THEN STAND NEXT TO A PLANT AND PRESS THE BUTTON TO WATER IT.",
+        "WOULD YOU GIVE FIVE PLANTS A DRINK?"
+      ]
+    },
+    {
+      "id": "water",
+      "type": "waterPlants",
+      "count": 5,
+      "icon": "gardener",
+      "objective": "Water the plants ({have} of {need})",
+      "hints": {
+        "gardener": ["YOU HAVE WATERED {have} OF {need} PLANTS. KEEP GOING, {name}!", "ANY PLANT THAT ISN'T READY TO PICK YET WILL DO."]
+      },
+      "say": ["(BZZZ! BZZZ! THE BEES ARE BUZZING BACK TO THE FLOWERS.)"]
+    },
+    {
+      "id": "honey",
+      "type": "gatherHoney",
+      "icon": "gardener",
+      "objective": "Collect honey from the beehive by the orchard",
+      "hints": {
+        "gardener": ["THE BEEHIVE IS BY THE ORCHARD, TO THE EAST. THE BEES SHOULD BE BUSY MAKING HONEY NOW!"]
+      },
+      "say": ["(MMM! A JAR OF SWEET, GOLDEN HONEY!)"]
+    },
+    {
+      "id": "back",
+      "type": "talk",
+      "target": "gardener",
+      "icon": "gardener",
+      "objective": "Take the honey to {@gardener}",
+      "say": [
+        "HONEY! YOU DID IT, {name}!",
+        "THE BEES ARE HAPPY AND MY PLANTS ARE HAPPY."
+      ]
+    }
+  ],
+  "complete": {
+    "speaker": "gardener",
+    "say": [
+      "PLEASE KEEP THIS HONEY. YOU HAVE A GREEN THUMB, {name}!",
+      "COME AND WATER MY PLANTS ANY TIME."
+    ]
+  }
+}

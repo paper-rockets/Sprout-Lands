@@ -1,0 +1,42 @@
+{
+  "about": "Places the outdoor areas (regions) and indoor rooms in one big grid. Each region file in world/regions holds a text map; this file says where it goes.",
+  "size": [198, 76],
+  "outdoorBounds": [0, 0, 198, 58],
+  "coastStyle": "soft",
+  "mapKey": {
+    "~": "water",
+    ".": "grass",
+    ",": "darker grass",
+    ":": "sand, dirt path or tilled field",
+    "b": "bushes (a forest wall you can't walk through)",
+    "f": "fence on grass",
+    "F": "fence on sand",
+    "=": "bridge going east-west",
+    "|": "bridge or pier going north-south",
+    "o": "stepping stones",
+    "h": "hill (raised grass)",
+    "^": "stairs up a hill",
+    "*": "snow",
+    "!": "invisible wall on grass",
+    "?": "invisible wall on sand"
+  },
+  "regions": [
+    { "id": "halloween", "at": [0, 0] },
+    { "id": "north", "at": [46, 0] },
+    { "id": "woods", "at": [46, 18] },
+    { "id": "farm", "at": [90, 18] },
+    { "id": "east", "at": [150, 0] }
+  ],
+  "connectors": [],
+  "rooms": [
+    {"id": "baker-house", "at": [2, 60]},
+    {"id": "blue-house", "at": [16, 60]},
+    {"id": "pine-cabin", "at": [28, 60]},
+    {"id": "old-mine", "at": [39, 60]}
+  ],
+  "routes": {
+    "about": "Locked ways that open during the story. A quest, dialogue or chest opens one with the effect { \"type\": \"unlock\", \"route\": \"<id>\" }; blockers in a region's \"entities\" use \"hiddenWhen\": { \"route\": \"<id>\" } to move out of the way.",
+    "secret-cove": { "lockedSay": ["A BIG MOSSY LOG IS IN THE WAY."] }
+  },
+  "start": { "region": "farm", "at": [18, 14], "facing": "down" }
+}

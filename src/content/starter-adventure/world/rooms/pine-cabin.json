@@ -1,0 +1,36 @@
+{
+  "id": "pine-cabin",
+  "name": "Pine Cabin",
+  "about": "The little cabin up in the Pine Hills (the orange hut by the campfire).",
+  "style": "wood-plank",
+  "door": {"region": "east", "at": [35, 14]},
+  "exit": [4, 6],
+  "map": [
+    "WWWWWWWWW",
+    "WWWWWWWWW",
+    "W_______W",
+    "W_______W",
+    "W_______W",
+    "W_______W",
+    "WWWW_WWWW"
+  ],
+  "objects": [
+    {"type": "wall_picture_night", "at": [4, 1]},
+    {"type": "wall_clock_small", "at": [2, 1]},
+    {"type": "bed_oak_green", "at": [1, 2]},
+    {"type": "dresser_oak", "at": [3, 2]},
+    {"type": "shelf_oak", "at": [6, 2]},
+    {"type": "rug_blue", "at": [2, 4]},
+    {"type": "mat_pink", "at": [4, 5]},
+    {"type": "stool_oak", "at": [4, 3]},
+    {"type": "table_oak", "at": [6, 4]},
+    {"type": "chair_oak_l", "at": [7, 4]},
+    {"type": "table_basket", "at": [6, 5]},
+    {"type": "plant_pot_flower", "at": [1, 5]},
+    {"type": "lamp_green", "at": [7, 5]},
+    {"type": "chest", "at": [1, 4]}
+  ],
+  "interactables": [
+    {"id": "cabin-chest", "kind": "chest", "color": "gold", "at": [1, 4], "reward": {"coins": [6, 10], "item": "emerald"}}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "about": "What people in the west woods say when no quest needs them. The first entry whose \"when\" is true is used; an entry with no \"when\" always matches, so put it last.",
+  "forest-pudding": [
+    { "when": { "questCompleted": "lost-in-forest" }, "say": ["{@forest-imp} IS SAFE AT HOME. THANK YOU AGAIN, {name}!", "HAVE YOU CROSSED THE LITTLE BRIDGE PAST MUSHROOM ISLE YET? THERE'S A SECRET COVE!"] },
+    { "when": { "questActive": "lost-in-forest" }, "say": ["PLEASE HURRY, {name}. THE WOODS ARE BIG FOR SOMEONE SO LITTLE!"] },
+    { "say": ["HELLO THERE!"] }
+  ],
+  "cat-dozy": [
+    { "say": ["YAWN... OH! HELLO, {name}. I'M {@cat-dozy}.", "THE WOODS ARE SO QUIET HERE. JUST FIVE MORE MINUTES OF NAP..."] }
+  ]
+}

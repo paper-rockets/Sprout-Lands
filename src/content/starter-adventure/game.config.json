@@ -1,0 +1,44 @@
+{
+  "about": "The settings that make this gift game its own. To make a new game, copy the whole starter-adventure folder, then change this file, the texts, the characters, the maps and the quests.",
+  "gameId": "sprout-river-garden-starter",
+  "title": "Sprout Lands: River Garden",
+  "shortTitle": "River Garden",
+  "recipient": {
+    "defaultName": "Adventurer",
+    "avatarId": "floppy-pup"
+  },
+  "world": {
+    "startRegion": "farm"
+  },
+  "ending": {
+    "about": "Who dances along the bottom of the ending screen: { hero: true } is the player's friend, { character } is a person from characters.json, { kind, color } is an animal.",
+    "cast": [
+      {"hero": true},
+      {"character": "gardener"},
+      {"character": "pudding-pup"},
+      {"character": "forest-imp"},
+      {"kind": "hen", "color": 0},
+      {"kind": "chick", "color": 1},
+      {"kind": "cow", "color": 3},
+      {"kind": "calf", "color": 0}
+    ]
+  },
+  "accessibility": {
+    "soundVolume": 0.8,
+    "textSpeed": "normal",
+    "reducedMotion": false
+  },
+  "credits": [
+    "Art and fonts: Sprout Lands by Cup Nooble",
+    "cupnooble.itch.io",
+    "Sounds and music: made for this game",
+    "Made with Phaser"
+  ],
+  "pwa": {
+    "icon": { "about": "The home-screen icon: one frame of a picture in public/, remade with py scripts/tools/make-icons.py", "file": "assets/characters/floppy-pup.png", "rect": [256, 64, 64, 64] },
+    "name": "Sprout Lands: River Garden",
+    "shortName": "River Garden",
+    "themeColor": "#9bd4c3",
+    "backgroundColor": "#9bd4c3"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "about": "What people on the East Isle say. First matching entry wins; the last has no condition.",
+  "east-miner": [
+    { "when": { "questCompleted": "sparkles-in-mine" }, "say": ["{name}! MY CRYSTALS SPARKLE ON MY SHELF EVERY NIGHT.", "SAY HELLO TO THE BATS AND SLIMES FOR ME! AND THEY SAY THERE'S STILL TREASURE AT THE FAR END OF THE MINE."] },
+    { "say": ["HELLO, {name}! I'M {@east-miner}. SEE THAT ROCKY SPOT WITH THE BOULDERS?", "THAT STONE ARCH IS THE OLD MINE. WALK RIGHT IN! FOLLOW THE RAILS, AND THEY SAY THERE'S TREASURE AT THE FAR END."] }
+  ],
+  "cat-sprinkles": [
+    { "say": ["MMM... HI {name}! I'M {@cat-sprinkles}.", "HAVE YOU TRIED BAKER BUN'S TREATS? I'M DREAMING OF DONUTS!"] }
+  ]
+}

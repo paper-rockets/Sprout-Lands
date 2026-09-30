@@ -1,0 +1,7 @@
+Please check your map again and send the whole corrected answer in the same format (NAME, SIZE, the map in one code block, NOTES).
+- Exactly [height] rows numbered from 00, and every row has [width / 10] groups of exactly 10 characters. Count every group.
+- Only these characters: ~ . : b h ^ = | o
+- No lone single tiles and no corner-only joins.
+- Every bridge and every line of stepping stones has land at both ends (a pier may end in the water).
+- Every hill has 2 ^ stairs on its bottom edge, with grass or a path below them.
+Keep everything else the same.

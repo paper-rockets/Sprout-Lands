@@ -1,0 +1,1741 @@
+{
+  "schemaVersion": 1,
+  "about": "Every file the game ships from public/assets. Each entry names the pack it came from, its licence, and how it was prepared. Run `npm run sync-art` after changing this list; `npm run build` refuses files that are not listed here.",
+  "packs": {
+    "sprites-premium": {
+      "name": "Sprout Lands - Sprites - Premium pack",
+      "folder": "Sprout Lands - Sprites - premium pack",
+      "creator": "Cup Nooble",
+      "url": "https://cupnooble.itch.io/sprout-lands-asset-pack",
+      "license": "Sprout Lands Premium licence (paid). Commercial and non-commercial use allowed, modification allowed. The pack itself may not be resold or redistributed. No NFTs or AI training. Credit required.",
+      "commercialUse": true,
+      "credit": "Assets from Sprout Lands by Cup Nooble",
+      "evidence": [
+        "Bundled read_me.txt (Premium licence)",
+        "itch.io page: 'Premium version license (paying at least $3.99): This asset pack can be used in any commercial or non-commercial project'",
+        "Owner confirmed the paid Premium pack was purchased (2026-09-28)"
+      ]
+    },
+    "ui-premium": {
+      "name": "Sprout Lands - UI Pack - Premium pack",
+      "folder": "Sprout Lands - UI Pack - Premium pack/Sprout Lands - UI Pack - Premium pack",
+      "creator": "Cup Nooble",
+      "url": "https://cupnooble.itch.io/sprout-lands-ui-pack",
+      "license": "Sprout Lands Premium UI licence (paid). Commercial and non-commercial use allowed, modification allowed. The pack itself may not be resold or redistributed. No NFTs or AI training. Credit required.",
+      "commercialUse": true,
+      "credit": "UI from Sprout Lands UI Pack by Cup Nooble",
+      "evidence": [
+        "Bundled read_me.txt (Premium UI licence)",
+        "itch.io page: 'Premium version license (paying at least $3.99): This asset pack can be used in any commercial or non-commercial project'",
+        "Owner confirmed the paid Premium UI pack was purchased (2026-09-28)"
+      ]
+    },
+    "sorry-pack": {
+      "name": "Sprout Lands - Sorry pack (free gift)",
+      "folder": "Sprout Sorry pack/Sprout Sorry pack",
+      "creator": "Cup Nooble",
+      "url": "https://cupnooble.itch.io/sorry-package",
+      "license": "The bundled read_me.txt repeats the Basic (non-commercial) wording, but the creator has publicly confirmed on the itch.io page that the Sorry pack may be used in commercial games, as long as the pack itself is not resold or redistributed. Credit required.",
+      "commercialUse": true,
+      "credit": "Extra art from the Sprout Lands Sorry pack by Cup Nooble",
+      "evidence": [
+        "itch.io comment reply by Cup Nooble to Tommy7heCat (about 133 days before 2026-09-28): 'yes it can' (commercial projects)",
+        "itch.io comment reply by Cup Nooble to roytt (about 202 days before 2026-09-28): 'yes, you can use the sorry pack in a commercial game'",
+        "Checked on https://cupnooble.itch.io/sorry-package on 2026-09-28. For extra certainty, ask Cup Nooble for written confirmation (Discord: cup_nooble)."
+      ]
+    },
+    "generated-characters": {
+      "name": "Generated Characters (project-owned)",
+      "folder": "Generated Characters",
+      "creator": "Commissioned for this project (image generation guided by Sprout Lands style)",
+      "url": "",
+      "license": "Project-owned original character sheets made for this game. See Generated Characters/README.md for how they were made.",
+      "commercialUse": true,
+      "credit": "",
+      "evidence": [
+        "Generated Characters/README.md"
+      ]
+    },
+    "made-art": {
+      "name": "Made Art (pictures redrawn for this game from the packs above)",
+      "folder": "Made Art",
+      "creator": "Made for this game by its scripts, from Cup Nooble's Sprout Lands art",
+      "url": "",
+      "license": "Derived from the Sprout Lands Premium pack (modification allowed by its licence). Same terms as that pack: do not resell or redistribute the pictures on their own. Credit Cup Nooble.",
+      "commercialUse": true,
+      "credit": "Assets from Sprout Lands by Cup Nooble",
+      "evidence": [
+        "Made Art/README.md says which script makes each file and from which pack picture"
+      ]
+    },
+    "halloween-art": {
+      "name": "Halloween pictures (made with ChatGPT for this game)",
+      "folder": "Made Art/halloween-game",
+      "creator": "Made for this game's owner with ChatGPT image generation, then cut and cleaned by the game's scripts",
+      "url": "",
+      "license": "Project-owned pictures made for this game (ChatGPT image generation, Sprout Lands style). Check the image tool's terms before selling.",
+      "commercialUse": true,
+      "credit": "",
+      "evidence": [
+        "Made Art/halloween/ holds the original ChatGPT sheets and cut_sheet.py; scripts/tools/make-halloween-art.py cleans and packs them"
+      ]
+    },
+    "made-sounds": {
+      "name": "Made Sounds (every sound effect, made for this game from scratch)",
+      "folder": "Made Sounds",
+      "creator": "Made for this game by scripts/tools/make-sounds.py (built from simple waves and noise; no recordings)",
+      "url": "",
+      "license": "Owned by this game: made from scratch by its own script, no outside sounds used.",
+      "commercialUse": true,
+      "credit": "",
+      "evidence": [
+        "py scripts/tools/make-sounds.py writes every file in Made Sounds/"
+      ]
+    }
+  },
+  "excludedPacks": {
+    "Sprout Lands - UI Pack - Basic pack": "Free Basic licence is non-commercial. Everything useful in it is also in the paid Premium UI pack, so nothing is taken from here.",
+    "Sprout-Lands-Tilemap-0.2.0": "Godot add-on. Its code is MIT (ideas only, nothing copied); its art is the free Basic pack (non-commercial). Nothing is taken from here.",
+    "Sprout-Lands-UI-0.2.0": "Godot add-on. MIT code plus free Basic UI art. Nothing is taken from here."
+  },
+  "files": [
+    {
+      "path": "assets/characters/floppy-pup.png",
+      "pack": "generated-characters",
+      "source": "game-ready-4dir/floppy-pup-walk-8dir-3frame-512x192.png",
+      "role": "runtime",
+      "use": "player / villager"
+    },
+    {
+      "path": "assets/characters/capybara-scarf.png",
+      "pack": "generated-characters",
+      "source": "game-ready-4dir/capy-scarf-walk-8dir-3frame-256x96.png",
+      "role": "runtime",
+      "use": "player / gardener"
+    },
+    {
+      "path": "assets/characters/pudding-pup.png",
+      "pack": "generated-characters",
+      "source": "game-ready-4dir/pudding-pup-walk-8dir-3frame-256x96.png",
+      "role": "runtime",
+      "use": "player"
+    },
+    {
+      "path": "assets/characters/sky-puppy.png",
+      "pack": "generated-characters",
+      "source": "game-ready-4dir/cloud-pup-walk-8dir-3frame-256x96.png",
+      "role": "runtime",
+      "use": "player / villager"
+    },
+    {
+      "path": "assets/characters/long-ear-puppy.png",
+      "pack": "generated-characters",
+      "source": "game-ready-4dir/snowy-pup-walk-8dir-3frame-256x96.png",
+      "role": "runtime",
+      "use": "player / villager"
+    },
+    {
+      "path": "assets/characters/forest-imp.png",
+      "pack": "generated-characters",
+      "source": "game-ready-4dir/forest-imp-walk-8dir-3frame-256x96.png",
+      "role": "runtime",
+      "use": "player / lost friend"
+    },
+    {
+      "path": "assets/characters/tabby-cat.png",
+      "pack": "generated-characters",
+      "source": "game-ready-4dir/tabby-cat-walk-8dir-3frame-256x96.png",
+      "role": "runtime",
+      "use": "player"
+    },
+    {
+      "path": "assets/characters/pumpkin-cat.png",
+      "pack": "generated-characters",
+      "source": "game-ready-4dir/pumpkin-cat-walk-8dir-3frame-256x96.png",
+      "role": "runtime",
+      "use": "player"
+    },
+    {
+      "path": "assets/characters/witch-cat.png",
+      "pack": "generated-characters",
+      "source": "game-ready-4dir/witch-cat-walk-8dir-3frame-256x96.png",
+      "role": "runtime",
+      "use": "player"
+    },
+    {
+      "path": "assets/characters/bat-cat.png",
+      "pack": "generated-characters",
+      "source": "game-ready-4dir/bat-cat-walk-8dir-3frame-256x96.png",
+      "role": "runtime",
+      "use": "player"
+    },
+    {
+      "path": "assets/characters/donut-cat.png",
+      "pack": "generated-characters",
+      "source": "game-ready-4dir/donut-cat-walk-8dir-3frame-256x96.png",
+      "role": "runtime",
+      "use": "player"
+    },
+    {
+      "path": "assets/characters/capy-plain.png",
+      "pack": "generated-characters",
+      "source": "game-ready-4dir/capy-plain-walk-8dir-3frame-256x96.png",
+      "role": "runtime",
+      "use": "player"
+    },
+    {
+      "path": "assets/characters/capy-nightcap.png",
+      "pack": "generated-characters",
+      "source": "game-ready-4dir/capy-nightcap-walk-8dir-3frame-256x96.png",
+      "role": "runtime",
+      "use": "player"
+    },
+    {
+      "path": "assets/characters/capy-strawhat.png",
+      "pack": "generated-characters",
+      "source": "game-ready-4dir/capy-strawhat-walk-8dir-3frame-256x96.png",
+      "role": "runtime",
+      "use": "player"
+    },
+    {
+      "path": "assets/characters/capy-explorer.png",
+      "pack": "generated-characters",
+      "source": "game-ready-4dir/capy-explorer-walk-8dir-3frame-256x96.png",
+      "role": "runtime",
+      "use": "player"
+    },
+    {
+      "path": "assets/npcs/scarf-cat.png",
+      "pack": "generated-characters",
+      "source": "game-ready-sitting/scarf-cat-sit-8frame-256x32.png",
+      "role": "runtime",
+      "use": "villager who sits and blinks"
+    },
+    {
+      "path": "assets/npcs/sleepy-cat.png",
+      "pack": "generated-characters",
+      "source": "game-ready-sitting/sleepy-cat-sit-8frame-256x32.png",
+      "role": "runtime",
+      "use": "villager who sits and blinks"
+    },
+    {
+      "path": "assets/npcs/leaf-cat.png",
+      "pack": "generated-characters",
+      "source": "game-ready-sitting/leaf-cat-sit-8frame-256x32.png",
+      "role": "runtime",
+      "use": "villager who sits and blinks"
+    },
+    {
+      "path": "assets/npcs/cloud-cat.png",
+      "pack": "generated-characters",
+      "source": "game-ready-sitting/cloud-cat-sit-8frame-256x32.png",
+      "role": "runtime",
+      "use": "villager who sits and blinks"
+    },
+    {
+      "path": "assets/npcs/pumpkin-cat.png",
+      "pack": "generated-characters",
+      "source": "game-ready-sitting/pumpkin-cat-sit-8frame-256x32.png",
+      "role": "runtime",
+      "use": "villager who sits and blinks"
+    },
+    {
+      "path": "assets/npcs/witch-cat.png",
+      "pack": "generated-characters",
+      "source": "game-ready-sitting/witch-cat-sit-8frame-256x32.png",
+      "role": "runtime",
+      "use": "villager who sits and blinks"
+    },
+    {
+      "path": "assets/npcs/bat-cat.png",
+      "pack": "generated-characters",
+      "source": "game-ready-sitting/bat-cat-sit-8frame-256x32.png",
+      "role": "runtime",
+      "use": "villager who sits and blinks"
+    },
+    {
+      "path": "assets/npcs/donut-cat.png",
+      "pack": "generated-characters",
+      "source": "game-ready-sitting/donut-cat-sit-8frame-256x32.png",
+      "role": "runtime",
+      "use": "villager who sits and blinks"
+    },
+    {
+      "path": "assets/npcs/moon-cat.png",
+      "pack": "generated-characters",
+      "source": "game-ready-sitting/moon-cat-sit-8frame-256x32.png",
+      "role": "runtime",
+      "use": "villager who sits and blinks"
+    },
+    {
+      "path": "assets/animals/hen.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Chicken/chicken default.png",
+      "role": "runtime",
+      "use": "Mama Hen"
+    },
+    {
+      "path": "assets/animals/chick.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Chicken_Baby/Chicken_Baby.png",
+      "role": "runtime",
+      "use": "chicks to find"
+    },
+    {
+      "path": "assets/animals/cow.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Cow/Light cow animations.png",
+      "role": "runtime",
+      "use": "farm animal"
+    },
+    {
+      "path": "assets/animals/frog.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/frog/frog_spritesheet.png",
+      "role": "runtime",
+      "use": "fishing cove frog"
+    },
+    {
+      "path": "assets/tiles/water.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/ground tiles/Water.png",
+      "role": "runtime",
+      "use": "animated water"
+    },
+    {
+      "path": "assets/tiles/grass.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/ground tiles/New tiles/Grass_tiles_v2.png",
+      "role": "runtime",
+      "use": "island ground with stone rim"
+    },
+    {
+      "path": "assets/tiles/hill.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/ground tiles/New tiles/Grass_Hill_Tiles_v2.png",
+      "role": "runtime",
+      "use": "raised grass with cliff"
+    },
+    {
+      "path": "assets/tiles/grass-layer.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/ground tiles/New tiles/Grass_Tile_Layers.png",
+      "role": "runtime",
+      "use": "soft grass edges over paths"
+    },
+    {
+      "path": "assets/tiles/soil.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/ground tiles/New tiles/Soil_Ground_Tiles.png",
+      "role": "runtime",
+      "use": "paths, sand and fields"
+    },
+    {
+      "path": "assets/tiles/hedge.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/ground tiles/New tiles/Bush_Tiles.png",
+      "role": "runtime",
+      "use": "hedge walls"
+    },
+    {
+      "path": "assets/tiles/snow.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Sprout winter/snow tiles 1.png",
+      "role": "runtime",
+      "use": "frosty island ground"
+    },
+    {
+      "path": "assets/tiles/stairs.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/ground tiles/New tiles/Grass_Hill_Tiles_Slopes v.2.png",
+      "role": "runtime",
+      "use": "hill stairs"
+    },
+    {
+      "path": "assets/tiles/fences.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Fences.png",
+      "role": "runtime",
+      "use": "fences"
+    },
+    {
+      "path": "assets/tiles/bridge.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Wooden_Bridge_v2.png",
+      "role": "runtime",
+      "use": "bridges and piers"
+    },
+    {
+      "path": "assets/tiles/stone-path.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Stone_Path.png",
+      "role": "runtime",
+      "use": "stepping stones"
+    },
+    {
+      "path": "assets/tiles/house-walls.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Wooden_House_Walls_Tilset.png",
+      "role": "runtime",
+      "use": "open-top rooms"
+    },
+    {
+      "path": "assets/objects/trees.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Trees, stumps and bushes.png",
+      "role": "runtime",
+      "use": "trees, bushes, stumps"
+    },
+    {
+      "path": "assets/objects/pines.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Pine Tree Biome.png",
+      "role": "runtime",
+      "use": "pine forest"
+    },
+    {
+      "path": "assets/objects/blossoms.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Cherry Blossom Biom.png",
+      "role": "runtime",
+      "use": "blossom island"
+    },
+    {
+      "path": "assets/objects/plants.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Mushrooms, Flowers, Stones.png",
+      "role": "runtime",
+      "use": "flowers, mushrooms, rocks"
+    },
+    {
+      "path": "assets/objects/water-plants.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Water Objects.png",
+      "role": "runtime",
+      "use": "lily pads, water rocks"
+    },
+    {
+      "path": "assets/objects/reeds.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Pine Tree Biome water plants.png",
+      "role": "runtime",
+      "use": "reeds"
+    },
+    {
+      "path": "assets/objects/boats.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Boats.png",
+      "role": "runtime",
+      "use": "rowboats and ferry"
+    },
+    {
+      "path": "assets/objects/signs.png",
+      "pack": "sprites-premium",
+      "source": "Objects/signs.png",
+      "role": "runtime",
+      "use": "signposts"
+    },
+    {
+      "path": "assets/objects/chest.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Chest.png",
+      "role": "runtime",
+      "use": "reward chest"
+    },
+    {
+      "path": "assets/objects/mailbox.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Mailbox Animation Frames.png",
+      "role": "runtime",
+      "use": "mailbox with letters"
+    },
+    {
+      "path": "assets/objects/fence-gates.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Fence gates animation sprites .png",
+      "role": "runtime",
+      "use": "swinging fence gates"
+    },
+    {
+      "path": "assets/objects/fishing-bobber.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Ocean Pack/fishing water splash frames and rod.png",
+      "role": "runtime",
+      "use": "fishing bobber and splashes"
+    },
+    {
+      "path": "assets/objects/fish-catches.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Ocean Pack/Fish Sprites.png",
+      "role": "runtime",
+      "use": "things you can catch"
+    },
+    {
+      "path": "assets/objects/barn-structures.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Animal Structures/Barn structures.png",
+      "role": "runtime",
+      "use": "crates and hay bales"
+    },
+    {
+      "path": "assets/objects/water-tray.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Animal Structures/Water tray.png",
+      "role": "runtime",
+      "use": "animal water trough"
+    },
+    {
+      "path": "assets/objects/well.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Water well.png",
+      "role": "runtime",
+      "use": "town well"
+    },
+    {
+      "path": "assets/objects/picnic-blanket.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Piknik blanket.png",
+      "role": "runtime",
+      "use": "picnic"
+    },
+    {
+      "path": "assets/objects/picnic-basket.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Piknik basket.png",
+      "role": "runtime",
+      "use": "picnic / clue"
+    },
+    {
+      "path": "assets/objects/furniture.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Basic_Furniture.png",
+      "role": "runtime",
+      "use": "room furniture"
+    },
+    {
+      "path": "assets/objects/furniture-wood.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Furniture/new Wooden Furniture.png",
+      "role": "runtime",
+      "use": "room furniture"
+    },
+    {
+      "path": "assets/objects/farm-plants.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Farming Plants.png",
+      "role": "runtime",
+      "use": "crop fields"
+    },
+    {
+      "path": "assets/objects/wood-shrooms.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/wood n shroms.png",
+      "role": "runtime",
+      "use": "forest clues"
+    },
+    {
+      "path": "assets/objects/houses.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Village pack/houses/small house/small_House_with_grass.png",
+      "role": "runtime",
+      "use": "village houses (open doorway; the door is the separate house-door picture)"
+    },
+    {
+      "path": "assets/objects/huts.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Village pack/houses/small hut/small_huts_with_doors_grass.png",
+      "role": "runtime",
+      "use": "huts"
+    },
+    {
+      "path": "assets/objects/brick-houses.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Village pack/houses/Grey brick house/grey_brick_houses_with_doors_grass.png",
+      "role": "runtime",
+      "use": "school"
+    },
+    {
+      "path": "assets/objects/chicken-houses.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/Building parts/Animal Structures/Chikcen_Houses.png",
+      "role": "runtime",
+      "use": "Mama Hen's coop"
+    },
+    {
+      "path": "assets/objects/winter.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Sprout winter/winter sprites.png",
+      "role": "runtime",
+      "use": "snowy trees, snowman"
+    },
+    {
+      "path": "assets/objects/campfire.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Sprout winter/campfire.png",
+      "role": "runtime",
+      "use": "campfire"
+    },
+    {
+      "path": "assets/tiles/ice.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Sprout winter/ice tiles.png",
+      "role": "runtime",
+      "use": "frozen pond"
+    },
+    {
+      "path": "assets/tiles/grass-soft.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/ground tiles/Old tiles/Grass.png",
+      "role": "runtime",
+      "use": "island grass with a soft green edge (the look of Cup Nooble's promo scenes)"
+    },
+    {
+      "path": "assets/tiles/grass-dark.png",
+      "pack": "sprites-premium",
+      "source": "Tilesets/ground tiles/New tiles/Darker_Grass_Tile_Layers.png",
+      "role": "runtime",
+      "use": "darker grass patches"
+    },
+    {
+      "path": "assets/objects/xmas-tree.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Sprout winter/christmas tree.png",
+      "role": "runtime",
+      "use": "twinkling tree"
+    },
+    {
+      "path": "assets/objects/fire.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Sprout winter/fire animation.png",
+      "role": "runtime",
+      "use": "campfire flames"
+    },
+    {
+      "path": "assets/objects/beehive.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Bee/beehive.png",
+      "role": "runtime",
+      "use": "beehive"
+    },
+    {
+      "path": "assets/objects/chest-gold.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Furniture/Golden_Chest.png",
+      "role": "runtime",
+      "use": "golden treasure chest (opens)"
+    },
+    {
+      "path": "assets/objects/chest-silver.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Furniture/Silver_Chest.png",
+      "role": "runtime",
+      "use": "silver treasure chest (opens)"
+    },
+    {
+      "path": "assets/objects/chest-cherry.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Furniture/Cherry_Chest.png",
+      "role": "runtime",
+      "use": "pink treasure chest (opens)"
+    },
+    {
+      "path": "assets/objects/chest-oak.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Furniture/Oak_Chest.png",
+      "role": "runtime",
+      "use": "wooden treasure chest (opens)"
+    },
+    {
+      "path": "assets/ui/hearts.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Icons/special icons/Hearts.png",
+      "role": "runtime",
+      "use": "small hearts for the counters"
+    },
+    {
+      "path": "assets/animals/bee.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Bee/small_bee_spritesheet.png",
+      "role": "runtime",
+      "use": "buzzing bees"
+    },
+    {
+      "path": "assets/animals/hen-blue.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Chicken/chicken blue.png",
+      "role": "runtime",
+      "use": "blue hen"
+    },
+    {
+      "path": "assets/animals/hen-brown.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Chicken/chicken brown.png",
+      "role": "runtime",
+      "use": "brown hen"
+    },
+    {
+      "path": "assets/animals/hen-green.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Chicken/chicken green.png",
+      "role": "runtime",
+      "use": "green hen"
+    },
+    {
+      "path": "assets/animals/hen-red.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Chicken/chicken red.png",
+      "role": "runtime",
+      "use": "red hen"
+    },
+    {
+      "path": "assets/animals/chick-blue.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Chicken_Baby/Chicken_Baby_Blue.png",
+      "role": "runtime",
+      "use": "blue chick"
+    },
+    {
+      "path": "assets/animals/chick-brown.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Chicken_Baby/Chicken_Baby_Brown.png",
+      "role": "runtime",
+      "use": "brown chick"
+    },
+    {
+      "path": "assets/animals/chick-green.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Chicken_Baby/Chicken_Baby_Green.png",
+      "role": "runtime",
+      "use": "green chick"
+    },
+    {
+      "path": "assets/animals/chick-red.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Chicken_Baby/Chicken_Baby_Red.png",
+      "role": "runtime",
+      "use": "red chick"
+    },
+    {
+      "path": "assets/animals/cow-brown.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Cow/Brown cow animations.png",
+      "role": "runtime",
+      "use": "brown cow"
+    },
+    {
+      "path": "assets/animals/cow-green.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Cow/Green cow animation sprites.png",
+      "role": "runtime",
+      "use": "green cow"
+    },
+    {
+      "path": "assets/animals/cow-pink.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Cow/Pink cow animation sprites.png",
+      "role": "runtime",
+      "use": "pink cow"
+    },
+    {
+      "path": "assets/animals/cow-purple.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Cow/Purple cow animation sprites.png",
+      "role": "runtime",
+      "use": "purple cow"
+    },
+    {
+      "path": "assets/animals/calf-light.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Cow_Baby/baby light cow animations sprites.png",
+      "role": "runtime",
+      "use": "calf"
+    },
+    {
+      "path": "assets/animals/calf-brown.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Cow_Baby/baby brown cow animations sprites.png",
+      "role": "runtime",
+      "use": "brown calf"
+    },
+    {
+      "path": "assets/animals/calf-green.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Cow_Baby/baby green cow animations sprites.png",
+      "role": "runtime",
+      "use": "green calf"
+    },
+    {
+      "path": "assets/animals/calf-pink.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Cow_Baby/baby pink cow animations sprites.png",
+      "role": "runtime",
+      "use": "pink calf"
+    },
+    {
+      "path": "assets/animals/calf-purple.png",
+      "pack": "sprites-premium",
+      "source": "Animals/Cow_Baby/baby purple cow animations sprites.png",
+      "role": "runtime",
+      "use": "purple calf"
+    },
+    {
+      "path": "assets/animals/frog-2.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/frog/frog_spritesheet2.png",
+      "role": "runtime",
+      "use": "second frog colour"
+    },
+    {
+      "path": "assets/animals/fish-small.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Ocean Pack/small fish.png",
+      "role": "runtime",
+      "use": "small fish swimming in a circle"
+    },
+    {
+      "path": "assets/animals/fish-medium.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Ocean Pack/mediuml fish.png",
+      "role": "runtime",
+      "use": "medium fish swimming in a circle"
+    },
+    {
+      "path": "assets/animals/fish-big.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Ocean Pack/big fish 2 swimming in cirkels.png",
+      "role": "runtime",
+      "use": "big fish swimming in a circle"
+    },
+    {
+      "path": "assets/items/eggs.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Items/Egg items.png",
+      "role": "runtime",
+      "use": "five coloured eggs"
+    },
+    {
+      "path": "assets/items/fruit.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Items/fruit and berries items.png",
+      "role": "runtime",
+      "use": "fruit and berries"
+    },
+    {
+      "path": "assets/items/food.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Bee/bread_jam_honey_items.png",
+      "role": "runtime",
+      "use": "honey, jam, bread"
+    },
+    {
+      "path": "assets/items/gems.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Dungeon Pack/tiles/dungeon_items.png",
+      "role": "runtime",
+      "use": "gems, ingots and potions"
+    },
+    {
+      "path": "assets/items/tools.png",
+      "pack": "sprites-premium",
+      "source": "Objects/Items/tools and meterials.png",
+      "role": "runtime",
+      "use": "watering can, axe, wood, stones"
+    },
+    {
+      "path": "assets/ui/coins.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Icons/special icons/coins.png",
+      "role": "runtime",
+      "use": "spinning coins"
+    },
+    {
+      "path": "assets/ui/hearts-wood.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Icons/special icons/Hearts in wood.png",
+      "role": "runtime",
+      "use": "hearts on wooden plaques"
+    },
+    {
+      "path": "assets/ui/stars-wood.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Icons/special icons/stars in wood.png",
+      "role": "runtime",
+      "use": "stars on wooden plaques"
+    },
+    {
+      "path": "assets/ui/slots.png",
+      "pack": "ui-premium",
+      "source": "emojis/emoji style ui/Inventory_Blocks_Spritesheet.png",
+      "role": "runtime",
+      "use": "item slots"
+    },
+    {
+      "path": "assets/ui/dialog-portrait.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Dialouge UI/Premade dialog box  big.png",
+      "role": "runtime",
+      "use": "dialogue box with portrait"
+    },
+    {
+      "path": "assets/ui/dialog-medium.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Dialouge UI/Premade dialog box medium.png",
+      "role": "runtime",
+      "use": "player card"
+    },
+    {
+      "path": "assets/ui/speech.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Dialouge UI/dialog box big.png",
+      "role": "runtime",
+      "use": "objective and prompt panels"
+    },
+    {
+      "path": "assets/ui/continue.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Dialouge UI/dialog box character finished talking click to continue indicator - spritesheet .png",
+      "role": "runtime",
+      "use": "dialogue continue arrow"
+    },
+    {
+      "path": "assets/ui/backdrops.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Dialouge UI/Character Backdrop-frame/character_backdrops.png",
+      "role": "runtime",
+      "use": "portrait frames"
+    },
+    {
+      "path": "assets/ui/icons.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Icons/All Icons.png",
+      "role": "runtime",
+      "use": "small icons"
+    },
+    {
+      "path": "assets/ui/icon-buttons.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/buttons/Icon Buttons/Icon Buttons Spritesheet.png",
+      "role": "runtime",
+      "use": "HUD buttons"
+    },
+    {
+      "path": "assets/ui/square-buttons.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/buttons/square/Square Buttons 26x26.png",
+      "role": "runtime",
+      "use": "menu buttons"
+    },
+    {
+      "path": "assets/ui/checks.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Other UI sprites/Xs and check marks/Xs and check marks.png",
+      "role": "runtime",
+      "use": "check and close marks"
+    },
+    {
+      "path": "assets/ui/sliders.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Other UI sprites/Sliders/Sliders.png",
+      "role": "runtime",
+      "use": "volume slider"
+    },
+    {
+      "path": "assets/ui/stars.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Icons/special icons/stars.png",
+      "role": "runtime",
+      "use": "rewards"
+    },
+    {
+      "path": "assets/ui/panel.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Other UI sprites/Setting menu.png",
+      "role": "runtime",
+      "use": "menu panels"
+    },
+    {
+      "path": "assets/ui/selectors.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Other UI sprites/Selectors/Selectorst.png",
+      "role": "runtime",
+      "use": "corner brackets that show which button is selected (keyboard focus)"
+    },
+    {
+      "path": "assets/fonts/sprout-8x14.ttf",
+      "pack": "ui-premium",
+      "source": "fonts/Font files TTF/pixelFont-7-8x14-sproutLands.ttf",
+      "role": "runtime",
+      "use": "body text"
+    },
+    {
+      "path": "assets/fonts/sprout-7x7.ttf",
+      "pack": "ui-premium",
+      "source": "fonts/Font files TTF/pixelFont-4-7x7-sproutLands.ttf",
+      "role": "runtime",
+      "use": "labels"
+    },
+    {
+      "path": "assets/ui/paw.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Mouse sprites/Catpaw Mouse icon.png",
+      "role": "runtime",
+      "use": "cat-paw mouse cursor"
+    },
+    {
+      "path": "assets/ui/paw-point.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Mouse sprites/Catpaw pointing Mouse icon.png",
+      "role": "runtime",
+      "use": "cat-paw cursor over buttons"
+    },
+    {
+      "path": "assets/ui/paw-hold.png",
+      "pack": "ui-premium",
+      "source": "UI Sprites/Mouse sprites/Catpaw holding Mouse icon.png",
+      "role": "runtime",
+      "use": "cat-paw cursor while pressing"
+    },
+    {
+      "path": "assets/objects/house-door.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Village pack/houses/wooden_door_spritesheet.png",
+      "role": "runtime",
+      "use": "house doors that swing open"
+    },
+    {
+      "path": "assets/objects/farm-plants-v2.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Farming Plants v2.png",
+      "role": "runtime",
+      "use": "crop fields (corn, sunflowers, beets, melons, eggplant and more)"
+    },
+    {
+      "path": "assets/objects/birch.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Birch wood Biom.png",
+      "role": "runtime",
+      "use": "birch trees"
+    },
+    {
+      "path": "assets/objects/picnic-foods.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/piknik/piknik_foods.png",
+      "role": "runtime",
+      "use": "food on the picnic blanket"
+    },
+    {
+      "path": "assets/objects/beehive-small.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Plant update 2/Bee/small_beehive.png",
+      "role": "runtime",
+      "use": "small beehive"
+    },
+    {
+      "path": "assets/tiles/room-wood.png",
+      "pack": "made-art",
+      "source": "room-wood.png",
+      "role": "runtime",
+      "use": "walls and floors inside houses (made by scripts/tools/make-room-tiles.py from Wooden_House_Walls_Tilset)"
+    },
+    {
+      "path": "assets/objects/oven.png",
+      "pack": "made-art",
+      "source": "oven.png",
+      "role": "runtime",
+      "use": "Baker Bun's brick oven, 16 frames with the fire burning (made by scripts/tools/make-oven.py from the brick houses' walls and fire.png)"
+    },
+    {
+      "path": "assets/tiles/cave-floor.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Dungeon Pack/tiles/ground_dirt_orange.png",
+      "role": "runtime",
+      "use": "orange cave floor"
+    },
+    {
+      "path": "assets/tiles/cave-walls.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Dungeon Pack/tiles/Dungeon_walls.png",
+      "role": "runtime",
+      "use": "stone cave walls"
+    },
+    {
+      "path": "assets/objects/cave-props.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Dungeon Pack/tiles/Dungeon_probs.png",
+      "role": "runtime",
+      "use": "crates, pots and the workbench in the cave"
+    },
+    {
+      "path": "assets/objects/cave-rocks.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Dungeon Pack/tiles/Rocks.png",
+      "role": "runtime",
+      "use": "cave rocks, ore and crystals"
+    },
+    {
+      "path": "assets/objects/cave-carts.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Dungeon Pack/tiles/Carts.png",
+      "role": "runtime",
+      "use": "mine carts"
+    },
+    {
+      "path": "assets/objects/cave-rails.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Dungeon Pack/tiles/Rails.png",
+      "role": "runtime",
+      "use": "mine rails"
+    },
+    {
+      "path": "assets/objects/cave-gates.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Dungeon Pack/tiles/dungeon_walls_decor_gates.png",
+      "role": "runtime",
+      "use": "stone arches for the mine mouth"
+    },
+    {
+      "path": "assets/animals/bat.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Dungeon Pack/enemies/bat_animations.png",
+      "role": "runtime",
+      "use": "cave bats"
+    },
+    {
+      "path": "assets/animals/slime.png",
+      "pack": "sorry-pack",
+      "source": "Early Access/Dungeon Pack/enemies/small_green_slime_animations.png",
+      "role": "runtime",
+      "use": "green cave slimes"
+    },
+    {
+      "path": "assets/objects/mine-mouth.png",
+      "pack": "made-art",
+      "source": "mine-mouth.png",
+      "role": "runtime",
+      "use": "the Old Mine's doorway on the East Isle: the Dungeon Pack's wide stone arch with its inside filled dark (made by scripts/tools/make-mine-mouth.py)"
+    },
+    {
+      "path": "assets/audio/bird-1.wav",
+      "pack": "made-sounds",
+      "source": "bird-1.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/bird-2.wav",
+      "pack": "made-sounds",
+      "source": "bird-2.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/bird-3.wav",
+      "pack": "made-sounds",
+      "source": "bird-3.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/bite.wav",
+      "pack": "made-sounds",
+      "source": "bite.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/breeze.wav",
+      "pack": "made-sounds",
+      "source": "breeze.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/cash.wav",
+      "pack": "made-sounds",
+      "source": "cash.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/cast.wav",
+      "pack": "made-sounds",
+      "source": "cast.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/cave-hum.wav",
+      "pack": "made-sounds",
+      "source": "cave-hum.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/caw.wav",
+      "pack": "made-sounds",
+      "source": "caw.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/chest.wav",
+      "pack": "made-sounds",
+      "source": "chest.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/close.wav",
+      "pack": "made-sounds",
+      "source": "close.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/cluck.wav",
+      "pack": "made-sounds",
+      "source": "cluck.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/coin.wav",
+      "pack": "made-sounds",
+      "source": "coin.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/cook.wav",
+      "pack": "made-sounds",
+      "source": "cook.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/crickets.wav",
+      "pack": "made-sounds",
+      "source": "crickets.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/door-close.wav",
+      "pack": "made-sounds",
+      "source": "door-close.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/door-open.wav",
+      "pack": "made-sounds",
+      "source": "door-open.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/drip.wav",
+      "pack": "made-sounds",
+      "source": "drip.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/drop.wav",
+      "pack": "made-sounds",
+      "source": "drop.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/ending.wav",
+      "pack": "made-sounds",
+      "source": "ending.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/fanfare.wav",
+      "pack": "made-sounds",
+      "source": "fanfare.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/found.wav",
+      "pack": "made-sounds",
+      "source": "found.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/gate-close.wav",
+      "pack": "made-sounds",
+      "source": "gate-close.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/gate-open.wav",
+      "pack": "made-sounds",
+      "source": "gate-open.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/ghost.wav",
+      "pack": "made-sounds",
+      "source": "ghost.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/grow.wav",
+      "pack": "made-sounds",
+      "source": "grow.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/heart.wav",
+      "pack": "made-sounds",
+      "source": "heart.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/honey.wav",
+      "pack": "made-sounds",
+      "source": "honey.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/locked.wav",
+      "pack": "made-sounds",
+      "source": "locked.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/mail.wav",
+      "pack": "made-sounds",
+      "source": "mail.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/meow.wav",
+      "pack": "made-sounds",
+      "source": "meow.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/moo.wav",
+      "pack": "made-sounds",
+      "source": "moo.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/munch.wav",
+      "pack": "made-sounds",
+      "source": "munch.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/open.wav",
+      "pack": "made-sounds",
+      "source": "open.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/owl.wav",
+      "pack": "made-sounds",
+      "source": "owl.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/page.wav",
+      "pack": "made-sounds",
+      "source": "page.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/peep.wav",
+      "pack": "made-sounds",
+      "source": "peep.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/pet.wav",
+      "pack": "made-sounds",
+      "source": "pet.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/pick.wav",
+      "pack": "made-sounds",
+      "source": "pick.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/plant.wav",
+      "pack": "made-sounds",
+      "source": "plant.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/quest-new.wav",
+      "pack": "made-sounds",
+      "source": "quest-new.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/ribbit.wav",
+      "pack": "made-sounds",
+      "source": "ribbit.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/ripe.wav",
+      "pack": "made-sounds",
+      "source": "ripe.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/room-in.wav",
+      "pack": "made-sounds",
+      "source": "room-in.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/room-out.wav",
+      "pack": "made-sounds",
+      "source": "room-out.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/rustle.wav",
+      "pack": "made-sounds",
+      "source": "rustle.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/select.wav",
+      "pack": "made-sounds",
+      "source": "select.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/sparkle.wav",
+      "pack": "made-sounds",
+      "source": "sparkle.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/splash.wav",
+      "pack": "made-sounds",
+      "source": "splash.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/squeak.wav",
+      "pack": "made-sounds",
+      "source": "squeak.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/squish.wav",
+      "pack": "made-sounds",
+      "source": "squish.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/star.wav",
+      "pack": "made-sounds",
+      "source": "star.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/step-dirt.wav",
+      "pack": "made-sounds",
+      "source": "step-dirt.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/step-grass.wav",
+      "pack": "made-sounds",
+      "source": "step-grass.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/step-stone.wav",
+      "pack": "made-sounds",
+      "source": "step-stone.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/step-wood.wav",
+      "pack": "made-sounds",
+      "source": "step-wood.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/talk.wav",
+      "pack": "made-sounds",
+      "source": "talk.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/tap.wav",
+      "pack": "made-sounds",
+      "source": "tap.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/toggle.wav",
+      "pack": "made-sounds",
+      "source": "toggle.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/tune.wav",
+      "pack": "made-sounds",
+      "source": "tune.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/water.wav",
+      "pack": "made-sounds",
+      "source": "water.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/audio/whoosh.wav",
+      "pack": "made-sounds",
+      "source": "whoosh.wav",
+      "role": "runtime",
+      "use": "sound effect"
+    },
+    {
+      "path": "assets/halloween/hw-buildings.png",
+      "pack": "halloween-art",
+      "source": "hw-buildings.png",
+      "role": "runtime",
+      "use": "Pumpkin Hollow buildings (ChatGPT pieces, pink rim cleaned by make-halloween-art.py)"
+    },
+    {
+      "path": "assets/halloween/hw-doors.png",
+      "pack": "halloween-art",
+      "source": "hw-doors.png",
+      "role": "runtime",
+      "use": "Pumpkin Hollow: the four houses' doorways standing open (made by make-halloween-art.py)"
+    },
+    {
+      "path": "assets/halloween/hw-nature.png",
+      "pack": "halloween-art",
+      "source": "hw-nature.png",
+      "role": "runtime",
+      "use": "Pumpkin Hollow nature (ChatGPT pieces, pink rim cleaned by make-halloween-art.py)"
+    },
+    {
+      "path": "assets/halloween/hw-decor.png",
+      "pack": "halloween-art",
+      "source": "hw-decor.png",
+      "role": "runtime",
+      "use": "Pumpkin Hollow decor (ChatGPT pieces, pink rim cleaned by make-halloween-art.py)"
+    },
+    {
+      "path": "assets/halloween/hw-candy.png",
+      "pack": "halloween-art",
+      "source": "hw-candy.png",
+      "role": "runtime",
+      "use": "Pumpkin Hollow candy icons, 16 x 16 each (make-halloween-art.py)"
+    },
+    {
+      "path": "assets/halloween/hw-ghost.png",
+      "pack": "halloween-art",
+      "source": "hw-ghost.png",
+      "role": "runtime",
+      "use": "ghost: 8 frames lined up on one strip (make-halloween-art.py)"
+    },
+    {
+      "path": "assets/halloween/hw-owl.png",
+      "pack": "halloween-art",
+      "source": "hw-owl.png",
+      "role": "runtime",
+      "use": "owl: 4 frames lined up on one strip (make-halloween-art.py)"
+    },
+    {
+      "path": "assets/halloween/hw-crow.png",
+      "pack": "halloween-art",
+      "source": "hw-crow.png",
+      "role": "runtime",
+      "use": "crow: 6 frames lined up on one strip (make-halloween-art.py)"
+    },
+    {
+      "path": "assets/halloween/hw-wisp.png",
+      "pack": "halloween-art",
+      "source": "hw-wisp.png",
+      "role": "runtime",
+      "use": "wisp: 4 frames lined up on one strip (make-halloween-art.py)"
+    },
+    {
+      "path": "assets/halloween/hw-cauldron.png",
+      "pack": "halloween-art",
+      "source": "hw-cauldron.png",
+      "role": "runtime",
+      "use": "cauldron: 4 frames lined up on one strip (make-halloween-art.py)"
+    },
+    {
+      "path": "assets/halloween/hw-lantern-post.png",
+      "pack": "halloween-art",
+      "source": "hw-lantern-post.png",
+      "role": "runtime",
+      "use": "lantern-post: 2 frames lined up on one strip (make-halloween-art.py)"
+    },
+    {
+      "path": "assets/halloween/hw-jack.png",
+      "pack": "halloween-art",
+      "source": "hw-jack.png",
+      "role": "runtime",
+      "use": "jack: 2 frames lined up on one strip (make-halloween-art.py)"
+    },
+    {
+      "path": "assets/halloween/hw-grass-soft.png",
+      "pack": "made-art",
+      "source": "halloween-tiles/hw-grass-soft.png",
+      "role": "runtime",
+      "use": "Pumpkin Hollow ground: assets/tiles/grass-soft.png recoloured by make-halloween-art.py"
+    },
+    {
+      "path": "assets/halloween/hw-grass-layer.png",
+      "pack": "made-art",
+      "source": "halloween-tiles/hw-grass-layer.png",
+      "role": "runtime",
+      "use": "Pumpkin Hollow ground: assets/tiles/grass-layer.png recoloured by make-halloween-art.py"
+    },
+    {
+      "path": "assets/halloween/hw-grass-dark.png",
+      "pack": "made-art",
+      "source": "halloween-tiles/hw-grass-dark.png",
+      "role": "runtime",
+      "use": "Pumpkin Hollow ground: assets/tiles/grass-dark.png recoloured by make-halloween-art.py"
+    },
+    {
+      "path": "assets/halloween/hw-soil.png",
+      "pack": "made-art",
+      "source": "halloween-tiles/hw-soil.png",
+      "role": "runtime",
+      "use": "Pumpkin Hollow ground: assets/tiles/soil.png recoloured by make-halloween-art.py"
+    },
+    {
+      "path": "assets/halloween/hw-hedge.png",
+      "pack": "made-art",
+      "source": "halloween-tiles/hw-hedge.png",
+      "role": "runtime",
+      "use": "Pumpkin Hollow ground: assets/tiles/hedge.png recoloured by make-halloween-art.py"
+    },
+    {
+      "path": "assets/halloween/hw-fences.png",
+      "pack": "made-art",
+      "source": "halloween-tiles/hw-fences.png",
+      "role": "runtime",
+      "use": "Pumpkin Hollow iron fence: fences.png recoloured purple (same layout)"
+    },
+    {
+      "path": "assets/halloween/hw-trees.png",
+      "pack": "made-art",
+      "source": "halloween-tiles/hw-trees.png",
+      "role": "runtime",
+      "use": "autumn trees for Pumpkin Hollow: trees.png recoloured orange"
+    },
+    {
+      "path": "assets/music/farm-day.ogg",
+      "pack": "made-sounds",
+      "source": "music/farm-day.ogg",
+      "role": "runtime",
+      "use": "music for Sunny Farm (made by make-music.py)"
+    },
+    {
+      "path": "assets/music/hollow.ogg",
+      "pack": "made-sounds",
+      "source": "music/hollow.ogg",
+      "role": "runtime",
+      "use": "music for Pumpkin Hollow (made by make-music.py)"
+    },
+    {
+      "path": "assets/music/house.ogg",
+      "pack": "made-sounds",
+      "source": "music/house.ogg",
+      "role": "runtime",
+      "use": "music for inside a house (made by make-music.py)"
+    },
+    {
+      "path": "assets/music/meadow.ogg",
+      "pack": "made-sounds",
+      "source": "music/meadow.ogg",
+      "role": "runtime",
+      "use": "music for North Meadows (made by make-music.py)"
+    },
+    {
+      "path": "assets/music/mine.ogg",
+      "pack": "made-sounds",
+      "source": "music/mine.ogg",
+      "role": "runtime",
+      "use": "music for the old mine (made by make-music.py)"
+    },
+    {
+      "path": "assets/music/title.ogg",
+      "pack": "made-sounds",
+      "source": "music/title.ogg",
+      "role": "runtime",
+      "use": "music for the start screen (made by make-music.py)"
+    },
+    {
+      "path": "assets/music/village.ogg",
+      "pack": "made-sounds",
+      "source": "music/village.ogg",
+      "role": "runtime",
+      "use": "music for Cobble Village and Pine Hills (made by make-music.py)"
+    },
+    {
+      "path": "assets/music/woods.ogg",
+      "pack": "made-sounds",
+      "source": "music/woods.ogg",
+      "role": "runtime",
+      "use": "music for West Woods (made by make-music.py)"
+    }
+  ]
+}

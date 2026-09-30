@@ -1,0 +1,14 @@
+{
+  "about": "Baker Bun's bakery (the yellow house in Cobble Village), the village grocer and the village picnic. First matching entry wins; the last has no condition.",
+  "baker-bun": [
+    { "when": { "questCompleted": "village-picnic" }, "say": ["THANK YOU FOR THE LOVELY PICNIC, {name}!", "MY OVEN IS ALWAYS WARM. COOK WHATEVER YOU LIKE!"] },
+    { "say": ["HELLO, {name}! I'M {@baker-bun}. WELCOME TO MY BAKERY!", "USE MY OVEN TO COOK: WHEAT, EGGS, FRUIT, BERRIES AND HONEY MAKE YUMMY TREATS.", "AT MY COUNTER YOU CAN BUY FOOD WITH COINS, OR SELL ME WHAT YOU GROW."] }
+  ],
+  "picnic-bun": [
+    { "when": { "questCompleted": "village-picnic" }, "say": ["WHAT A PICNIC! EVERYONE IN THE VILLAGE IS TALKING ABOUT IT.", "MY BAKERY IS OPEN: THE OVEN AND THE COUNTER ARE ALL YOURS, {name}."] },
+    { "say": ["WHAT A FEAST, {name}!"] }
+  ],
+  "east-grocer": [
+    { "say": ["FRESH FROM THE MARKET! I'M {@east-grocer}.", "{@baker-bun} MOVED THE BAKERY INTO THE YELLOW HOUSE. WALK IN THROUGH THE DOOR AND SAY HELLO!", "THE ORCHARD IS FULL OF FRUIT, THE PIER IS GREAT FOR FISHING, AND SOMEONE HID TREASURE ON THE LAKE ISLAND UP IN THE PINE HILLS!"] }
+  ]
+}

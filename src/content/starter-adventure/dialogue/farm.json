@@ -1,0 +1,17 @@
+{
+  "about": "What people and animals on the farm say when no quest needs them. The first entry whose \"when\" is true is used; an entry with no \"when\" always matches, so put it last. {name} is the player's name.",
+  "mama-hen": [
+    { "when": { "questCompleted": "chicks-home" }, "say": ["CLUCK! THANK YOU AGAIN, {name}. MY BABIES ARE SAFE AND SNUG."] },
+    { "when": { "questActive": "chicks-home" }, "say": ["BRING MY CHICKS HOME TO THE COOP, {name}!"] },
+    { "say": ["CLUCK CLUCK!"] }
+  ],
+  "gardener": [
+    { "when": { "questActive": "busy-bees" }, "say": ["THE BEES AND I ARE COUNTING ON YOU, {name}!"] },
+    { "when": { "questCompleted": "busy-bees" }, "say": ["THE BEES ARE BUSY AND THE PLANTS ARE HAPPY. THANK YOU, {name}!"] },
+    { "when": { "questCompleted": "chicks-home" }, "say": ["YOU FOUND ALL THE CHICKS? WELL DONE, {name}!", "THE PUMPKINS ARE NEARLY READY. COME BACK SOON!"] },
+    { "say": ["HELLO, {name}! THE CROPS ARE GROWING WELL THIS YEAR.", "THE CARROTS ARE MY FAVOURITE. THE PUMPKINS ARE NEARLY READY!"] }
+  ],
+  "cat-mittens": [
+    { "say": ["WELCOME TO SUNNY FARM, {name}! I'M {@cat-mittens}.", "A COSY SCARF MAKES EVERY WALK BETTER. HAVE FUN EXPLORING!"] }
+  ]
+}

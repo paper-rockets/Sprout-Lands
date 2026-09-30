@@ -1,0 +1,93 @@
+BASE MAP FROM A PICTURE (Sprout Lands game)
+
+SETTINGS (you can change these two lines)
+- Map width: 60 columns. Use 40, 50, 60 or 70. (40 suits a small scene such as one garden or clearing; 60 suits an island.)
+- Map name: pick a short name that fits the picture.
+
+YOUR JOB
+The picture I attached is a top-down map. Redraw its layout as a text map for my kids' pixel-art game. Each character is one square 16 x 16 ground tile, about the size of the player. Draw the BASE only: water, grass, sand paths, bushes, hills and bridges. No buildings and no objects. I will add trees, flowers, animals and buildings myself later.
+
+Map height: keep the picture's shape. Height = width x (picture height / picture width), rounded to a whole number. A square picture at width 60 gives 60 rows. Never more than 90 rows; if it would be, use a smaller width.
+
+USE ONLY THESE 9 CHARACTERS
+~  water: sea, rivers, ponds, lakes
+.  grass
+:  sand: dirt paths, beaches, bare earth, sandy yards, farm soil
+b  bushes: thick hedge walls and dense forest (nobody can walk through)
+h  hill: a block of raised grass with a short edge all round
+^  stairs up onto a hill
+=  wooden bridge going left-right
+|  wooden bridge or pier going up-down
+o  stepping stones in water
+Spaces only go between the groups of 10 (see ANSWER FORMAT). Never use any other character, and never use a space as a tile.
+
+WHAT THE GAME LOOKS LIKE (translate the picture into this)
+The game uses Cup Nooble's "Sprout Lands" tiles: flat top-down ground, soft green grass that meets the water with a soft edge, pale teal water, tan sand paths with soft edges, round leafy bush walls, and low grass hills with a short edge. The tiles cannot make cliffs, stone walls, rocky rims, dark soil banks, or deep and shallow water.
+- A grey stone or rocky rim around the land -> an ordinary coast: grass (or a sand beach) right next to ~
+- A cliff, ledge or raised plateau inside the land -> h hill
+- Dense forest, a hedge, a wall of bushes, a thick leafy border round the map -> b
+- A dirt road, trail, sandy yard, beach or farm field -> :
+- Sea, river, pond or lake -> ~ (light and dark water are both ~)
+- A wooden bridge or boardwalk -> = or |. A pier or jetty -> | (or =) sticking out into the water.
+- Stepping stones in water -> o
+- Single trees, trees with grass between them, rocks, flowers, tall grass, mushrooms, stumps, logs, crates, hay, barrels, chests, signs, animals, lily pads, rocks in the water -> leave them out and draw the ground under them (usually . or ~).
+- Houses, barns, coops, sheds, wells, fences, gates, walls, crops, market stalls -> leave them out. Draw plain ground where they stood (. or :), the same size, so the space stays free. List them under NOTES.
+- Titles, logos, text, buttons, watermarks -> ignore them and continue the ground around them.
+
+RULES FOR A CLEAN MAP
+1. Exact size: exactly [height] rows, and every row exactly [width] characters.
+2. Keep the picture's layout: the coastline shape, water, paths, forest, hills and open spaces all stay in the same places.
+3. Nature is never straight. Coasts, river banks, pond edges, forest edges and hill edges step in or out every 3 to 6 tiles. Only built things (fields, yards, paths beside buildings, bridges) may be straight.
+4. No crumbs. No lone tiles: no single water tile in grass, single grass tile in water, single bush, or one-tile peninsula. Every patch of water, land, bushes or hill is at least 2 tiles wide at every point. Things that join must share a side, not just touch at a corner.
+5. Paths (:) are 1 tile wide; they look wider in the game. Use 2 wide only for a main road. Paths bend and join places together.
+6. Ponds are at least 5 tiles across, uneven ovals, with at least 2 tiles of land between a pond and the sea. Rivers are at least 3 tiles wide.
+7. Bushes (b): walls at least 2 tiles thick, forest at least 5 thick. Forest along the map edge works well.
+8. Hills (h): at least 5 x 5, a solid block of h with rounded, uneven corners, and at least 1 tile of grass or sand all round (a hill never touches water or bushes). Nothing else inside a hill. A hill's outer ring can't be walked on, so every hill needs stairs: 2 ^ side by side on its bottom (south) edge, with grass or a path right below them.
+9. Bridges are straight, 1 tile wide, at least 2 tiles long, and only over water. = runs left-right, | runs up-down. Every bridge starts on land and ends on land (or runs off the map edge, if it does in the picture); only a pier may end in the water.
+10. Stepping stones: a short straight line of 2 to 4 o over narrow water, with land at both ends.
+11. The player must be able to walk everywhere: all land joins up (through bridges or stepping stones), unless the picture clearly shows an island with no way to it.
+12. Edges: if the picture's land stops before its edge, leave at least 2 tiles of water round the whole map. If land runs off the picture's edge, let it touch the map edge.
+
+HOW TO WORK
+Lay an imaginary grid of [width] x [height] squares over the picture. Place the big shapes first (coast, water, forest, hills), then the paths, then bridges and stepping stones. Fill the rows one at a time, top to bottom.
+
+ANSWER FORMAT (answer with only this)
+NAME: <map name>
+SIZE: <width> x <height>
+Then the map in one code block. Each line is: the row number as 2 digits (00, 01, 02 ...), one space, then the row cut into groups of exactly 10 characters with one space between groups.
+Then:
+NOTES: up to 12 short lines saying what you left out (buildings, fences, fields, big landmarks) and roughly where, for example:
+- fenced chicken pen with a coop: rows 24-30, columns 10-20
+
+FORMAT EXAMPLE (a small 40 x 16 map, only to show the format; your map follows the picture)
+NAME: Example Cove
+SIZE: 40 x 16
+```
+00 ~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~
+01 ~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~
+02 ~~~~~bbbb. .......... .~~~~~~~~~ ~~~~~~~~~~
+03 ~~~bbbbbb. ...hhhhh.. .....~~~~~ ~~~~~~~~~~
+04 ~~bbbbbb.. ..hhhhhhh. ........~~ ~~~~...~~~
+05 ~~bbbbb... ..hhhhhhh. .........~ ~~~.....~~
+06 ~~bbbb.... ..hhhhhhh. ..:::::::: ===.....~~
+07 ~~bbbb.... ...h^^hh.. ..:....... ~~~.....~~
+08 ~~~bbbb... .....::::: :::......~ ~~~~...~~~
+09 ~~bbbbbb.. .....:.... ~~~~....~~ ~~~~~o~~~~
+10 ~~bbbbb... .....:...~ ~~~~~...~~ ~~~~~o~~~~
+11 ~~~bbb.... .....:...~ ~~~....~~~ ~~~~....~~
+12 ~~~~bbb..: :::::::... .....~~~~~ ~~~~...~~~
+13 ~~~~~~bb:: ::::::.... .....~~~~~ ~~~~~~~~~~
+14 ~~~~~~~~~~ ~~|~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~
+15 ~~~~~~~~~~ ~~|~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~
+```
+NOTES:
+- none (this example has no buildings)
+
+BEFORE YOU ANSWER, CHECK AND FIX
+- exactly [height] rows, numbered from 00
+- every row has [width / 10] groups of exactly 10 characters (count every group)
+- only the 9 characters listed
+- every bridge and every line of stepping stones has land at both ends (a pier may end in the water)
+- every hill has 2 ^ stairs on its bottom edge
+- no crumbs and no corner-only joins
+- it still looks like the picture

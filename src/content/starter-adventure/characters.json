@@ -1,0 +1,20 @@
+{
+  "about": "The characters a player can be. 'texture' is the picture key in art.json (an 8-direction walking sheet). To add a character: add a row here and its picture in art.json.",
+  "characters": [
+    {"id": "floppy-pup", "name": "Floppy Pup", "texture": "char-floppy-pup", "player": true, "blurb": "A cheerful friend with floppy ears."},
+    {"id": "gardener", "name": "Scarf Capybara", "texture": "char-capybara-scarf", "player": true, "blurb": "Cosy and cheerful."},
+    {"id": "pudding-pup", "name": "Pudding Pup", "texture": "char-pudding-pup", "player": true, "blurb": "Soft, sweet and fluffy."},
+    {"id": "sky-puppy", "name": "Cloud Pup", "texture": "char-sky-puppy", "player": true, "blurb": "Floppy white ears."},
+    {"id": "snowy-puppy", "name": "Snowy Pup", "texture": "char-long-ear-puppy", "player": true, "blurb": "Long ears, loves walks."},
+    {"id": "forest-imp", "name": "Little Imp", "texture": "char-forest-imp", "player": true, "blurb": "A shy, sneaky friend."},
+    {"id": "tabby-cat", "name": "Tabby Cat", "texture": "char-tabby-cat", "player": true, "blurb": "Round, sleepy and sweet."},
+    {"id": "pumpkin-cat", "name": "Pumpkin Cat", "texture": "char-pumpkin-cat", "player": true, "blurb": "Wears a cosy pumpkin hat."},
+    {"id": "witch-cat", "name": "Witch Cat", "texture": "char-witch-cat", "player": true, "blurb": "A tiny witch with a broom."},
+    {"id": "bat-cat", "name": "Bat Cat", "texture": "char-bat-cat", "player": true, "blurb": "Little wings, big heart."},
+    {"id": "donut-cat", "name": "Donut Cat", "texture": "char-donut-cat", "player": true, "blurb": "Sweet as sprinkles."},
+    {"id": "capy-plain", "name": "Capybara", "texture": "char-capy-plain", "player": true, "blurb": "Calm, kind and ready for a walk."},
+    {"id": "capy-nightcap", "name": "Sleepy Capybara", "texture": "char-capy-nightcap", "player": true, "blurb": "Nightcap and starry blanket."},
+    {"id": "capy-strawhat", "name": "Straw Hat Capybara", "texture": "char-capy-strawhat", "player": true, "blurb": "Loves sunny farm days."},
+    {"id": "capy-explorer", "name": "Explorer Capybara", "texture": "char-capy-explorer", "player": true, "blurb": "Never without a satchel."}
+  ]
+}

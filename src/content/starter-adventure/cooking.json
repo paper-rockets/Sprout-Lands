@@ -1,0 +1,50 @@
+{
+  "about": "Cooking at an oven and buying/selling at a shop (rules: src/engine/rules/Kitchen.js). A recipe 'needs' exact items ('item') or any items of a bag group ('group': eggs, fruit, berries, veggies, honey, ...), 'count' each (1 if left out). 'makes' is an art.json item. A shop 'sells' items for coins and 'buys' items or whole groups; an oven or shop in a room or region file names nothing here except the shop id ('shop'). 'share': talk to a friend while carrying something from this bag group and they take one (never food a quest still needs); 'say' lines take turns, {treat} = its name; a person can have their own 'treatSay', or 'treats': false to never take any (rules: GameRules.shareTreat).",
+  "share": {
+    "group": "treats",
+    "say": [
+      "OH! IS THAT A {treat} FOR ME? YUM! THANK YOU, {name}!",
+      "MMM, A {treat}! THAT IS THE YUMMIEST THING I HAVE HAD ALL DAY!",
+      "YUM YUM! YOU ARE SO KIND TO SHARE, {name}!"
+    ]
+  },
+  "recipes": [
+    { "id": "bun", "makes": "food-bun", "needs": [{ "item": "veg-wheat" }, { "group": "eggs" }] },
+    { "id": "bread", "makes": "food-bread", "needs": [{ "item": "veg-wheat", "count": 2 }] },
+    { "id": "toast", "makes": "food-toast", "needs": [{ "item": "veg-wheat" }, { "group": "honey" }] },
+    { "id": "sandwich", "makes": "food-sandwich", "needs": [{ "item": "veg-wheat" }, { "group": "veggies" }] },
+    { "id": "pie", "makes": "food-pie", "needs": [{ "item": "veg-wheat" }, { "group": "fruit", "count": 2 }] },
+    { "id": "muffin", "makes": "food-muffin", "needs": [{ "item": "veg-wheat" }, { "group": "eggs" }, { "group": "berries" }] },
+    { "id": "tart", "makes": "food-tart", "needs": [{ "item": "veg-wheat" }, { "group": "berries", "count": 2 }] },
+    { "id": "jam", "makes": "food-jam", "needs": [{ "group": "berries", "count": 2 }, { "group": "honey" }] },
+    { "id": "pudding", "makes": "food-pudding", "needs": [{ "group": "eggs" }, { "group": "honey" }] },
+    { "id": "cake", "makes": "food-cake", "needs": [{ "item": "veg-wheat" }, { "group": "eggs", "count": 2 }, { "group": "honey" }] }
+  ],
+  "shops": {
+    "bakery": {
+      "name": "Baker Bun's Bakery",
+      "keeper": "baker-bun",
+      "sells": [
+        { "item": "food-bun", "price": 3 },
+        { "item": "food-bread", "price": 3 },
+        { "item": "food-muffin", "price": 4 },
+        { "item": "food-pie", "price": 5 },
+        { "item": "food-tart", "price": 5 },
+        { "item": "food-cake", "price": 8 },
+        { "item": "veg-wheat", "price": 2 },
+        { "item": "egg", "price": 2 },
+        { "item": "honey", "price": 3 },
+        { "item": "seeds", "price": 1 }
+      ],
+      "buys": [
+        { "group": "treats", "price": 2 },
+        { "group": "veggies", "price": 1 },
+        { "group": "fruit", "price": 1 },
+        { "group": "berries", "price": 1 },
+        { "group": "eggs", "price": 1 },
+        { "group": "honey", "price": 2 },
+        { "group": "fish", "price": 2 }
+      ]
+    }
+  }
+}

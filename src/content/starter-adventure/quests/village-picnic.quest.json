@@ -1,0 +1,53 @@
+{
+  "about": "Baker Bun (in the bakery, the yellow house in Cobble Village) wants a village picnic. Cook a bun, a fruit pie and a honey cake at the oven (recipes in cooking.json) or buy them at the counter, then put them on the picnic blanket by the village pond (east.json entity 'village-picnic'). Setting the picnic out sets the flag 'picnic-ready': the food appears on the blanket and Bun walks over to it (the Bun in the bakery hides, the one at the picnic appears).",
+  "id": "village-picnic",
+  "title": "The Village Picnic",
+  "giver": "baker-bun",
+  "icon": "food-cake",
+  "reward": { "stars": 1, "hearts": 2, "coins": 10, "items": { "food-muffin": 2 } },
+  "steps": [
+    {
+      "id": "meet",
+      "type": "talk",
+      "target": "baker-bun",
+      "icon": "food-bun",
+      "objective": "Talk to {@baker-bun}",
+      "say": [
+        "{name}! I HAVE A WONDERFUL IDEA: A PICNIC FOR THE WHOLE VILLAGE!",
+        "WE NEED A BUN, A FRUIT PIE AND A HONEY CAKE ON THE BLANKET BY THE VILLAGE POND.",
+        "COOK THEM AT MY OVEN, OR BUY THEM AT MY COUNTER WITH COINS. THE OVEN SHOWS WHAT EACH TREAT NEEDS."
+      ]
+    },
+    {
+      "id": "bring",
+      "type": "bring",
+      "target": "village-picnic",
+      "bag": { "food-bun": 1, "food-pie": 1, "food-cake": 1 },
+      "icon": "food-cake",
+      "objective": "Bring a bun, a pie and a cake to the picnic blanket ({have} of {need})",
+      "hints": {
+        "village-picnic": ["(THE BLANKET IS READY. BRING A BUN, A FRUIT PIE AND A HONEY CAKE. YOU HAVE {have} OF {need}.)"],
+        "baker-bun": ["A BUN NEEDS WHEAT AND AN EGG. A PIE NEEDS WHEAT AND TWO FRUIT. A CAKE NEEDS WHEAT, TWO EGGS AND HONEY.", "NO WHEAT? PICK IT IN THE FIELDS, OR BUY SOME AT MY COUNTER."]
+      },
+      "say": ["(YOU SET OUT THE BUN, THE PIE AND THE CAKE. WHAT A FEAST!)", "HERE COMES {@picnic-bun}!"],
+      "effects": [{ "type": "setFlag", "flag": "picnic-ready" }]
+    },
+    {
+      "id": "feast",
+      "type": "talk",
+      "target": "picnic-bun",
+      "icon": "food-cake",
+      "objective": "Say hello to {@picnic-bun} at the picnic",
+      "say": [
+        "OH, {name}, IT'S PERFECT! THE BUN IS SO SOFT, AND THE CAKE IS SO SWEET.",
+        "YOU ARE A REAL BAKER NOW!"
+      ]
+    }
+  ],
+  "complete": {
+    "speaker": "picnic-bun",
+    "say": [
+      "PLEASE TAKE THESE MUFFINS. THANK YOU FOR THE BEST PICNIC EVER!"
+    ]
+  }
+}

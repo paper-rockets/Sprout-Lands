@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sound lab</title>
+<style>
+  :root { color-scheme: light dark; --bg: #f6ecd8; --card: #fff8ea; --ink: #3a2a1c; --line: #d9c49c; --good: #2f7d3b; --bad: #b53a2a; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #231b14; --card: #30261d; --ink: #f3e6cf; --line: #5a4835; } }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.4 system-ui, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 22px; margin: 4px 0 2px; }
+  p.hint { margin: 0 0 14px; opacity: .8; }
+  h2 { font-size: 15px; text-transform: uppercase; letter-spacing: .06em; margin: 22px 0 8px; opacity: .8; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+  .s { display: flex; gap: 4px; background: var(--card); border: 2px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .s button.play { flex: 1; border: 0; background: none; color: inherit; font: inherit; padding: 12px 10px; text-align: left; min-height: 48px; cursor: pointer; }
+  .s button.vote { border: 0; background: none; font-size: 20px; padding: 0 10px; cursor: pointer; opacity: .35; }
+  .s.bad { border-color: var(--bad); }
+  .s.bad button.vote { opacity: 1; }
+  .s.playing { border-color: var(--good); }
+  .music { background: var(--card); border: 2px solid var(--line); border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
+  .music b { display: block; margin-bottom: 4px; }
+  .music audio { width: 100%; }
+  .bar { position: sticky; bottom: 0; background: var(--bg); padding: 10px 0; border-top: 2px solid var(--line); margin-top: 18px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .bar button { font: inherit; padding: 10px 14px; border-radius: 10px; border: 2px solid var(--line); background: var(--card); color: inherit; cursor: pointer; }
+  #out { flex-basis: 100%; white-space: pre-wrap; font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Sound lab</h1>
+  <p class="hint">Tap a name to hear it. Tap the thumbs-down on the ones you don't like, then press "Copy my list" and paste it to Claude.</p>
+  <div id="root"></div>
+  <div class="bar"><button id="copy">Copy my list</button><button id="clear">Clear</button><span id="count"></span><div id="out"></div></div>
+</main>
+<script>
+const SFX = {
+  'Menus and talking': ['tap', 'open', 'close', 'page', 'select', 'toggle', 'whoosh', 'talk', 'locked'],
+  'Walking': ['step-grass', 'step-dirt', 'step-wood', 'step-stone'],
+  'Gardening': ['water', 'grow', 'ripe', 'pick', 'plant'],
+  'Things in the world': ['rustle', 'drop', 'found', 'coin', 'heart', 'star', 'sparkle', 'honey', 'gate-open', 'gate-close', 'door-open', 'door-close', 'room-in', 'room-out', 'mail', 'splash', 'cast', 'bite', 'chest'],
+  'Friends and animals': ['pet', 'peep', 'cluck', 'moo', 'squeak', 'squish', 'ghost', 'caw', 'meow', 'ribbit'],
+  'Quests, prizes, kitchen': ['quest-new', 'tune', 'fanfare', 'ending', 'cook', 'cash', 'munch'],
+  'Nature': ['bird-1', 'bird-2', 'bird-3', 'owl', 'drip', 'breeze', 'crickets', 'cave-hum'],
+};
+const MUSIC = [
+  ['farm-day', 'Sunny Farm'], ['meadow', 'North Meadows'], ['woods', 'West Woods'], ['village', 'Cobble Village + Pine Hills'],
+  ['hollow', 'Pumpkin Hollow'], ['house', 'Inside a house'], ['mine', 'The old mine'], ['title', 'Start screen'],
+];
+const KEY = 'sound-lab-bad';
+let bad = new Set();
+try { bad = new Set(JSON.parse(localStorage.getItem(KEY) || '[]')); } catch (e) {}
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify([...bad])); } catch (e) {} document.getElementById('count').textContent = bad.size ? bad.size + ' marked' : ''; };
+const root = document.getElementById('root');
+let current = null;
+const stop = () => { if (current) { current.audio.pause(); current.el.classList.remove('playing'); current = null; } };
+function addGroup(title, names, isMusic) {
+  const h = document.createElement('h2'); h.textContent = title; root.appendChild(h);
+  const g = document.createElement('div'); g.className = 'grid'; root.appendChild(g);
+  for (const n of names) {
+    const el = document.createElement('div'); el.className = 's' + (bad.has(n) ? ' bad' : '');
+    const p = document.createElement('button'); p.className = 'play'; p.textContent = n;
+    p.onclick = () => {
+      stop();
+      const a = new Audio('assets/audio/' + n + '.wav'); a.loop = /^(breeze|crickets|cave-hum)$/.test(n);
+      a.play(); el.classList.add('playing'); current = { audio: a, el };
+      a.onended = () => el.classList.remove('playing');
+    };
+    const v = document.createElement('button'); v.className = 'vote'; v.textContent = '\u{1F44E}';
+    v.onclick = () => { bad.has(n) ? bad.delete(n) : bad.add(n); el.classList.toggle('bad', bad.has(n)); save(); };
+    el.append(p, v); g.appendChild(el);
+  }
+}
+for (const [title, names] of Object.entries(SFX)) addGroup(title, names);
+const h = document.createElement('h2'); h.textContent = 'Music (one tune for each place)'; root.appendChild(h);
+for (const [id, label] of MUSIC) {
+  const d = document.createElement('div'); d.className = 'music';
+  d.innerHTML = '<b></b><audio controls preload="none"></audio>';
+  d.querySelector('b').textContent = label + '  (' + id + ')';
+  const a = d.querySelector('audio'); a.src = 'assets/music/' + id + '.ogg';
+  a.addEventListener('play', () => { document.querySelectorAll('.music audio').forEach((x) => { if (x !== a) x.pause(); }); stop(); });
+  root.appendChild(d);
+}
+document.getElementById('copy').onclick = async () => {
+  const text = bad.size ? 'Sounds I do not like: ' + [...bad].join(', ') : 'I like all of them.';
+  document.getElementById('out').textContent = text;
+  try { await navigator.clipboard.writeText(text); } catch (e) {}
+};
+document.getElementById('clear').onclick = () => { bad.clear(); save(); location.reload(); };
+save();
+</script>
+</body>
+</html>

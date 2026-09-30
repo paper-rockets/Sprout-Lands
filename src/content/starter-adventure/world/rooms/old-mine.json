@@ -1,0 +1,70 @@
+{
+  "id": "old-mine",
+  "name": "The Old Mine",
+  "about": "The old mine under the Pine Hills (the stone arch at the top of the pine trail, by Miner Moss). A winding tunnel with mine carts on rails, a sparkly crystal nook and a treasure chest at the far end.",
+  "style": "cave-stone",
+  "door": {"region": "east", "at": [23, 8]},
+  "exit": [9, 13],
+  "map": [
+    "WWWWWWWWWWWWWWWWWWWW",
+    "WWWWWWWWWWWWWWWWWWWW",
+    "WW_________WW_____WW",
+    "WW________________WW",
+    "WW________________WW",
+    "WW___WWWWWWWW_____WW",
+    "WW___WWWWWWWW_____WW",
+    "WW___WWWWWWWW_____WW",
+    "WW___WW______WWWWWWW",
+    "WW___WW______WWWWWWW",
+    "WW________________WW",
+    "WW________________WW",
+    "WW________________WW",
+    "WWWWWWWWW_WWWWWWWWWW"
+  ],
+  "objects": [
+    {"type": "cave_rails_up", "at": [3, 11]},
+    {"type": "cave_rails_up", "at": [3, 9]},
+    {"type": "cave_rails_up", "at": [3, 7]},
+    {"type": "cave_rails_up", "at": [3, 5]},
+    {"type": "cave_rails_across", "at": [3, 3]},
+    {"type": "cave_rails_across", "at": [5, 3]},
+    {"type": "cave_rails_across", "at": [7, 3]},
+    {"type": "cave_cart", "at": [3, 6]},
+    {"type": "cave_cart_barrel", "at": [9, 3]},
+    {"type": "cave_boulder_white", "at": [2, 2]},
+    {"type": "cave_rock_brown", "at": [4, 12]},
+    {"type": "cave_workbench", "at": [10, 8]},
+    {"type": "cave_crate_small", "at": [7, 10]},
+    {"type": "cave_pots", "at": [7, 8]},
+    {"type": "cave_rock_grey", "at": [12, 12]},
+    {"type": "cave_crate_stack", "at": [6, 10]},
+    {"type": "cave_crystal", "at": [17, 10]},
+    {"type": "cave_ore_ruby", "at": [17, 12]},
+    {"type": "cave_ore_diamond", "at": [15, 10]},
+    {"type": "cave_ore_green", "at": [14, 12]},
+    {"type": "cave_ore_gold", "at": [13, 2]},
+    {"type": "cave_crystal", "at": [17, 2]},
+    {"type": "cave_crate_ore", "at": [16, 7]},
+    {"type": "cave_cart_side", "at": [13, 7]},
+    {"type": "cave_rock_spike", "at": [17, 5]},
+    {"type": "cave_ore_blue", "at": [14, 5]},
+    {"type": "cave_rock_orange", "at": [10, 2]},
+    {"type": "chest", "at": [15, 3]}
+  ],
+  "entities": [
+    {"id": "mine-crystal-1", "name": "Shiny crystal", "kind": "item", "object": "mine_crystal", "at": [2, 9], "visibleWhen": {"questActive": "sparkles-in-mine"}, "pickupSay": ["(A SHINY CRYSTAL, HIDING BY THE RAILS!)"]},
+    {"id": "mine-crystal-2", "name": "Shiny crystal", "kind": "item", "object": "mine_crystal", "at": [6, 2], "visibleWhen": {"questActive": "sparkles-in-mine"}, "pickupSay": ["(A SHINY CRYSTAL, UP IN THE TOP TUNNEL!)"]},
+    {"id": "mine-crystal-3", "name": "Shiny crystal", "kind": "item", "object": "mine_crystal", "at": [12, 9], "visibleWhen": {"questActive": "sparkles-in-mine"}, "pickupSay": ["(A SHINY CRYSTAL, TUCKED BEHIND THE WORKBENCH!)"]}
+  ],
+  "critters": [
+    {"kind": "bat", "at": [8, 4]},
+    {"kind": "bat", "at": [15, 5]},
+    {"kind": "bat", "at": [5, 11]},
+    {"kind": "slime", "at": [11, 11]},
+    {"kind": "slime", "at": [3, 8]},
+    {"kind": "slime", "at": [16, 11]}
+  ],
+  "interactables": [
+    {"id": "mine-chest", "kind": "chest", "color": "gold", "at": [15, 3], "reward": {"coins": [10, 15], "item": "diamond"}}
+  ]
+}

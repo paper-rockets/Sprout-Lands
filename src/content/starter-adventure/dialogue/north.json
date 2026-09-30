@@ -1,0 +1,15 @@
+{
+  "about": "What people in the North Meadows say. The first entry whose \"when\" is true is used; an entry with no \"when\" always matches, so put it last. {name} is the player's name; {@some-id} is someone's name.",
+  "north-granny": [
+    { "when": { "questsCompleted": ["chicks-home", "lost-in-forest"] }, "say": ["MY, MY, {name}! THE CHICKS ARE HOME AND {@forest-imp} IS SAFE.", "YOU'RE THE KINDEST HELPER THESE MEADOWS HAVE EVER SEEN. HAVE A CUP OF TEA WITH ME ANY TIME!"] },
+    { "when": { "questActive": "chicks-home" }, "say": ["HELLO, DEAR! LOOKING FOR LITTLE CHICKS?", "I HEARD A TINY PEEP UNDER THE PINK BLOSSOM TREES, JUST SOUTH OF MY MEADOW."] },
+    { "when": { "questActive": "lost-in-forest" }, "say": ["THE LITTLE ONE FROM THE WOODS IS LOST? OH DEAR.", "LOOK FOR THINGS WITH A STAR OVER THEM, {name}. CLUES ALWAYS SPARKLE!"] },
+    { "say": ["WELCOME TO THE NORTH MEADOWS, {name}! I'M {@north-granny}.", "HOP ACROSS THE STEPPING STONES TO TREASURE ISLE, AND TRY FISHING OFF THE LITTLE PIER BY THE LILY POND."] }
+  ],
+  "cat-nimbus": [
+    { "say": ["HI {name}! I'M {@cat-nimbus}. I LOVE WATCHING THE CLOUDS FLOAT OVER THE BLOSSOM TREES.", "THAT ONE LOOKS LIKE A BUNNY. AND THAT ONE LOOKS LIKE ME!"] }
+  ],
+  "cat-sprig": [
+    { "say": ["SHH! I'M {@cat-sprig}, AND I'M EXPLORING.", "THE MUSHROOM RING IS FULL OF SECRETS. KEEP YOUR EYES OPEN, {name}!"] }
+  ]
+}
