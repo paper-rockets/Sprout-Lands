@@ -1,0 +1,30 @@
+{
+  "id": "./?game=sprout-river-garden-starter",
+  "name": "Sprout Lands: River Garden",
+  "short_name": "River Garden",
+  "description": "Sprout Lands: River Garden",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "theme_color": "#9bd4c3",
+  "background_color": "#9bd4c3",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
