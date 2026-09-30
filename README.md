@@ -3,6 +3,8 @@
 A cosy single-player adventure for kids, built with Phaser 4 (WebGL) and Vite. A new gift game is a copy of
 `src/content/starter-adventure/` with its own title, characters, maps, quests and dialogue (see `EDITING-GUIDE.md`).
 
+**Play it:** https://paper-rockets.github.io/Sprout-Lands/ (install it from the browser menu to play offline; `npm run deploy` publishes a new build).
+
 ```
 npm install
 npm run dev        # http://localhost:8190

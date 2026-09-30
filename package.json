@@ -14,6 +14,7 @@
     "check:quest": "node scripts/tools/quest-check.mjs",
     "check:blocked": "node scripts/tools/blocked-check.mjs",
     "check:treats": "node scripts/tools/treats-check.mjs",
+    "deploy": "node scripts/deploy-pages.mjs",
     "check:rooms": "node scripts/tools/room-check.mjs",
     "check:bakery": "node scripts/tools/bakery-check.mjs",
     "check:world": "node scripts/check-world.mjs",
